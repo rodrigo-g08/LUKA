@@ -10,3 +10,18 @@ function activarBoton(elemento1,elemento2,elemento3,elemento4, clase) {
     form2.classList.remove(clase);
 
 }
+
+function mostrarNotificacion(event, mesage){
+    event.preventDefault();
+
+    const notification = document.getElementById("notificacion");
+    notification.textContent = mesage;
+    notification.classList.add("mostrar");
+
+    setTimeout(() => {
+        notification.classList.remove("mostrar");
+        window.location.href = "miBalance.html";
+    }, 1200);
+
+
+}

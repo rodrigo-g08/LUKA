@@ -201,3 +201,22 @@ input{
     width: 270px;
     font-family: poppins, sans-serif;
 }
+
+#notificacion {
+    position: fixed;
+    bottom: 20px;
+    color: var(--blanco);
+    font-family: poppins, sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    right: 20px;
+    background-color: var(--verde);
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    padding: 1rem;
+}
+
+#notificacion.mostrar {
+    opacity: 1;
+}
