@@ -10,15 +10,42 @@
 <body>
     <div class="nav-bg">
         <nav class="navegacion-principal">
-            <a href="#"> <img src="img/Logo.png" id="Logo"> </a>
+            <a href="mibalance.html"> <img src="img/Logo.png" id="Logo"> </a>
             <a href="miBalance.html" class="opciones activo">Mi Balance</a>
             <a href="#" class="opciones">Categorias</a>
             <a href="resumenFinanciero.html" class="opciones">Resumen Financiero</a>
             <a href="#" class="opciones">Invitar Pareja</a>
-            <a href="#"><img src="img/Notificacion.png" id="NotificacionesImg"></a>
+            <a href="notificaciones.html"><img src="img/Notificacion.png" id="NotificacionesImg"></a>
             <a href="#"><img src="img/Moneda.png" id="MonedaImg"></a>
         </nav>
     </div>
+    
+    <div id="mensajeConfirmacionpago" style="display:none;" class="overlay">
+    <div class="mensaje">
+        ✅ Pago fijo se ha registrado correctamente
+    </div>
+    </div>
+
+    <div id="mensajeConfirmacionrecordatorio" style="display:none;" class="overlay">
+    <div class="mensaje">
+        ✅ Recordatorio activado correctamente.
+    </div>
+    </div>
+
+    <div id="mensajeConfirmacionlimite" style="display:none;" class="overlay">
+    <div class="mensaje">
+        ✅ Limite de gasto registrado correctamente.
+    </div>
+    </div>
+
+    <div id="mensajeConfirmacionmeta" class="overlay" style="display: none;">
+        <div class="mensaje">✅ ¡Meta añadida con éxito!</div>
+    </div>
+
+    <div id="mensajeConfirmacioningreso" class="overlay" style="display: none;">
+        <div class="mensaje">💰 ¡Ingreso registrado correctamente!</div>
+    </div>
+
 
     <main class="main">
         <header>
@@ -65,5 +92,73 @@
             </div>
         </div>
     </main>
+
+    <script>
+window.onload = function () {
+    const urlParams = new URLSearchParams(window.location.search);
+    const main = document.querySelector('.main');
+
+    // Verificar confirmación de pago
+    if (urlParams.get('confirmacionpago') === 'ok') {
+        const overlay = document.getElementById('mensajeConfirmacionpago');
+        overlay.style.display = 'flex';
+        main.style.filter = 'blur(4px)';
+        setTimeout(() => {
+            overlay.style.display = 'none';
+            main.style.filter = 'none';
+            history.replaceState({}, document.title, window.location.pathname);
+        }, 2000);
+    }
+
+    // Verificar recordatorio
+    if (urlParams.get('recordatorio') === 'ok') {
+        const overlay = document.getElementById('mensajeConfirmacionrecordatorio');
+        overlay.style.display = 'flex';
+        main.style.filter = 'blur(4px)';
+        setTimeout(() => {
+            overlay.style.display = 'none';
+            main.style.filter = 'none';
+            history.replaceState({}, document.title, window.location.pathname);
+        }, 2000);
+    }
+
+    // Verificar límite de gasto
+    if (urlParams.get('confirmacionlimite') === 'ok') {
+        const overlay = document.getElementById('mensajeConfirmacionlimite');
+        overlay.style.display = 'flex';
+        main.style.filter = 'blur(4px)';
+        setTimeout(() => {
+            overlay.style.display = 'none';
+            main.style.filter = 'none';
+            history.replaceState({}, document.title, window.location.pathname);
+        }, 2000);
+    }
+
+    // Verificar confirmación de meta
+    if (urlParams.get('confirmacionmeta') === 'ok') {
+        const overlay = document.getElementById('mensajeConfirmacionmeta');
+        overlay.style.display = 'flex';
+        main.style.filter = 'blur(4px)';
+        setTimeout(() => {
+            overlay.style.display = 'none';
+            main.style.filter = 'none';
+            history.replaceState({}, document.title, window.location.pathname);
+        }, 2000);
+    }
+
+    // Verificar confirmación de ingreso
+    if (urlParams.get('confirmacioningreso') === 'ok') {
+        const overlay = document.getElementById('mensajeConfirmacioningreso');
+        overlay.style.display = 'flex';
+        main.style.filter = 'blur(4px)';
+        setTimeout(() => {
+            overlay.style.display = 'none';
+            main.style.filter = 'none';
+            history.replaceState({}, document.title, window.location.pathname);
+        }, 2000);
+    }
+};
+</script>
 </body>
+
 </html>

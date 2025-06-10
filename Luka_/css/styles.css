@@ -301,6 +301,89 @@ a{
     justify-content: space-between;
 }
 
+.notificaciones-modal {
+    position: absolute;
+    top: 100px; /* debajo del navbar */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 320px;
+    background-color: var(--secundario); /* Azul */
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    color: var(--blanco);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.notificaciones-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.notificaciones-header h2 {
+    font-size: 1.6rem;
+    margin: 0;
+    color: var(--blanco);
+}
+
+.cerrar {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    font-size: 1.2rem;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
 
 
+.notificaciones-modal button {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--verde);
+    border: none;
+    border-radius: 5px;
+    color: var(--blanco);
+    font-weight: 600;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 1.4rem;
+}
 
+.notificaciones-modal button:hover {
+    opacity: 0.9;
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px 0;
+}
+
+.botones-notificaciones {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.botones-notificaciones .boton {
+    background-color: #93A88D; /* un verde suave */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.botones-notificaciones .boton:hover {
+    background-color: #829277;
+}

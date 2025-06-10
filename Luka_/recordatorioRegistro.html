@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Añadir Meta de Ahorro</title>
+    <title>Registrar Ingreso</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/agregarMetastyle.css">
+    <link rel="stylesheet" href="css/registrarIngresostyle.css">
 </head>
 <body>
     <div class="nav-bg">
@@ -23,22 +23,16 @@
     </div>
 
     <main class="main">
-        <div class="modal-meta">
+        <div class="modal-ingreso">
             <div class="modal-header">
-                <h2>Agregar Meta de Ahorro</h2>
+                <h2>Registrar Ingreso</h2>
                 <button class="cerrar" onclick="window.location.href='metasAhorro.html'">✕</button>
             </div>
             <div class="modal-body">
-                <label>Ingrese nombre de la meta</label>
-                <input type="text" placeholder="Ej: Comprar bicicleta">
+                <label>Digite monto:</label>
+                <input type="number" placeholder="Ej: 500">
                 
-                <label>Digite monto</label>
-                <input type="number" placeholder="Ej: 1500">
-                
-                <label>Seleccionar fecha</label>
-                <input type="date">
-                
-                <button class="btn-guardar" onclick="guardarMeta()">Guardar</button>
+                <button class="btn-guardar" onclick="guardarIngreso()">Guardar</button>
             </div>
         </div>
     </main>

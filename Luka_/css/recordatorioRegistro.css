@@ -1,0 +1,99 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #F0F0F0;
+    margin: 0;
+}
+
+.nav-bg {
+    background-color: #27355F;
+}
+
+.navegacion-principal {
+    width: 120rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+}
+
+.navegacion-principal a {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 2rem;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+#Logo {
+    width: 132px;
+    height: 38px;
+}
+#NotificacionesImg {
+    width: 22px;
+    height: 22px;
+}
+#MonedaImg {
+    width: 18px;
+    height: 18px;
+}
+
+main.recordatorio {
+    max-width: 700px;
+    margin: 4rem auto;
+    background: #27355F;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px #fff;
+}
+
+.recordatorio h2 {
+    font-size: 2.4rem;
+    color: #fff;
+}
+
+.activar {
+    margin: 2rem 0;
+    font-size: 1.6rem;
+}
+
+.hora-group {
+    margin: 1.5rem 0;
+    font-size: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+}
+
+.hora-group input[type="time"] {
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    font-size: 1.4rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.botones {
+    margin-top: 2rem;
+}
+
+button {
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #95A57C;
+    color: #fff;
+}
+
+.activar label {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500; 
+}
+
+
+

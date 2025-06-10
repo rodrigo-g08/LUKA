@@ -7,86 +7,147 @@
     --amarillo: #FFD600;
 }
 
+html {
+    font-size: 62.5%;
+}
+
 body {
+    font-size: 16px;
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     font-family: 'Poppins', sans-serif;
+    background-color: #F0F0F0;
+}
+
+/* Barra de navegación arriba */
+.nav-bg {
     background-color: var(--secundario);
+}
+
+.navegacion-principal {
+    width: 120rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+.navegacion-principal a {
+    display: flex;
+    align-items: center;
+    color: var(--blanco);
+    font-size: 2rem;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.navegacion-principal .opciones {
+    position: relative;
+}
+
+.navegacion-principal .opciones::after {
+    background-color: #F0F0F0;
+    position: absolute;
+    height: 6px;
+    bottom: 0;
+    content: "";
+    width: 0;
+    transition: width 0.3s ease;
+}
+
+.navegacion-principal .opciones:hover::after {
+    width: 100%;
+}
+
+#Logo { width: 132px; height: 38px; }
+#NotificacionesImg { width: 22px; height: 22px; }
+#MonedaImg { width: 18px; height: 18px; }
+
+.main {
+    padding-top: 2rem;
+    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
 }
 
-.popup-content {
+.modal-ingreso {
     background-color: var(--secundario);
     padding: 2rem;
     border-radius: 12px;
     width: 300px;
     color: var(--blanco);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    position: relative;
 }
 
-.popup-content h2 {
-    margin-top: 0;
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.popup-content label {
+.modal-header h2 { margin: 0; }
+
+.cerrar {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    color: var(--blanco);
+    cursor: pointer;
+}
+
+.modal-body label {
     display: block;
     margin-top: 1rem;
-    font-size: 0.85rem;
+    font-size: 1rem;
 }
 
-.popup-content input {
+.modal-body input {
     width: 100%;
     padding: 0.5rem;
     margin-top: 0.3rem;
     border: none;
     border-radius: 6px;
     background-color: var(--primario);
+    font-size: 1rem;
 }
 
-.guardar {
+.btn-guardar {
     margin-top: 1.5rem;
     background-color: var(--amarillo);
     color: var(--oscuro);
     border: none;
-    padding: 0.5rem 1rem;
-    font-weight: bold;
-    border-radius: 8px;
-    cursor: pointer;
-}
-
-.popup-close {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    text-decoration: none;
-    font-size: 1.2rem;
-    color: var(--blanco);
-    background: none;
-    border: none;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.popup-input {
-    width: 100%;
-    padding: 0.5rem;
-    margin: 0.5rem 0 1rem;
-    border-radius: 6px;
-    border: none;
-    font-size: 0.9rem;
-}
-
-.popup-button {
-    background-color: var(--amarillo);
-    color: var(--oscuro);
-    border: none;
     padding: 0.6rem 1.2rem;
+    font-weight: bold;
     border-radius: 8px;
-    font-size: 0.9rem;
-    font-weight: 600;
     cursor: pointer;
+    width: 100%;
 }
 
+/* Overlays */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
 
+.mensaje {
+    background-color: #fff;
+    padding: 2rem 3rem;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    color: #333;
+}

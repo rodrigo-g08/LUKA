@@ -3,18 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registrar Ingreso</title>
+    <title>Límites de Gasto</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/registrarIngresostyle.css">
+    <link rel="stylesheet" href="css/limitesGastos.css">
+    <script src="js/main.js" defer></script>
 </head>
 <body>
     <div class="nav-bg">
         <nav class="navegacion-principal">
-            <a href="#"><img src="img/Logo.png" id="Logo"></a>
+            <a href="mibalance.html"><img src="img/Logo.png" id="Logo"></a>
             <a href="miBalance.html" class="opciones">Mi Balance</a>
-            <a href="#" class="opciones">Categorias</a>
+            <a href="#" class="opciones">Categorías</a>
             <a href="resumenFinanciero.html" class="opciones">Resumen Financiero</a>
             <a href="#" class="opciones">Invitar Pareja</a>
             <a href="notificaciones.html"><img src="img/Notificacion.png" id="NotificacionesImg"></a>
@@ -22,21 +23,17 @@
         </nav>
     </div>
 
-    <main class="main">
-        <div class="modal-ingreso">
-            <div class="modal-header">
-                <h2>Registrar Ingreso</h2>
-                <button class="cerrar" onclick="window.location.href='metasAhorro.html'">✕</button>
-            </div>
-            <div class="modal-body">
-                <label>Digite monto:</label>
-                <input type="number" placeholder="Ej: 500">
-                
-                <button class="btn-guardar" onclick="guardarIngreso()">Guardar</button>
-            </div>
-        </div>
+    <main class="contenido">
+        <h2>Límites de Gasto</h2>
+        <form class="form-limite">
+            <label>Categoría:</label>
+            <input type="text" placeholder="Ej: Comida">
+            
+            <label>Monto Límite (S/):</label>
+            <input type="number" placeholder="Ej: 200.00">
+            
+            <button type="button" onclick="guardarYRedirigirLimite()">Guardar Límite</button>
+        </form>
     </main>
-
-    <script src="js/main.js"></script>
 </body>
 </html>
