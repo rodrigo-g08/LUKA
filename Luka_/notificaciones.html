@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notificaciones</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <script defer src="js/notificaciones.js"></script>
+</head>
+<body>
+    <div class="nav-bg">
+        <nav class="navegacion-principal">
+            <a href="#"><img src="img/Logo.png" id="Logo"></a>
+            <a href="miBalance.html" class="opciones">Mi Balance</a>
+            <a href="#" class="opciones">Categorias</a>
+            <a href="resumenFinanciero.html" class="opciones">Resumen Financiero</a>
+            <a href="#" class="opciones">Invitar Pareja</a>
+            <a href="notificaciones.html" id="btnNotificaciones"><img src="img/Notificacion.png" id="NotificacionesImg"></a>
+            <a href="#"><img src="img/Moneda.png" id="MonedaImg"></a>
+        </nav>
+    </div>
+
+    <main class="main">
+    <div class="notificaciones-modal" id="modalNotificaciones">
+        <div class="notificaciones-header">
+            <h2>Notificaciones</h2>
+            <a href="metasAhorro.html" class="cerrar">✕</a>
+        </div>
+
+        <div class="notificaciones-body">
+            <label class="toggle-label">
+                <input type="checkbox" checked>
+                Activar notificaciones
+            </label>
+
+            <div class="botones-notificaciones">
+                <a href="pagosFijos.html" class="boton">Pagos fijos</a>
+                <a href="limitesGastos.html" class="boton">Límites de gasto</a>
+                <a href="recordatorioRegistro.html" class="boton">Recordatorio de registro</a>
+            </div>
+        </div>
+    </div>
+    </main>
+</body>
+</html>
