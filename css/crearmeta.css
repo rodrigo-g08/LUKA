@@ -75,7 +75,11 @@ body{
     width: 18px;
     height: 18px;
 }
+#LogOutImg{
+    width: 25px;
+    height: 25px;
 
+}
 main {
     padding-top:  2rem;
 }

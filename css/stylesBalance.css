@@ -22,6 +22,8 @@ body{
 
 .nav-bg{
     background-color: var(--secundario);
+
+    width: 100vw;
 }
 
 .navegacion-principal {   
@@ -80,6 +82,7 @@ body{
     height: 25px;
 
 }
+
 main {
     padding-top:  2rem;
 }
@@ -98,102 +101,126 @@ h2{
     color: var(--secundario);
 }
 
+p{
+    font-size: 20px;
+}
+
+a{
+    color: var(--secundario);
+    text-decoration: none;
+}
+
 .contenedor{
     margin: 0  18rem;
     display: flex;
     gap: 10rem;
 }
 
-td img {
-    width:19px;
-    height: 19px;
-    vertical-align: middle;
-    margin-right: 0.9rem;
+.balance{
+
+    flex: 0 0 200px;
+
+    color: var(--secundario);
 }
 
-.lista-Ranking{
-    border-radius: 8px;
+.balance h2{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.balance a{
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 500;
+    position: relative;
+    margin: 0.5rem 1rem;
+}
+
+
+.balance a::after{
+    position: absolute;
+    content:"";
+    bottom: 0px;
+    left: 0px;
+    height: 3px;
+    width: 0;
     background-color: var(--secundario);
-    padding: 2rem;
-    width: 400px;
-    margin: 0 auto;
-    color:#ffffff;
-    height: auto;
-    height: 250px;
+    transition: width 0.3s ease;
 }
 
-.tabla-gastos{
-    text-align: left;
+.balance a:hover::after{
     width: 100%;
-    border-collapse:collapse;
 }
 
-.tabla-gastos th, .tabla-gastos td {
-    padding: 1rem;
-    border-bottom: 2px solid #ffffff;
-}
-
-.tabla-gastos th {
-    color: white;
-    font-weight: 600;
-}
-
-.tabla-vs{
-    background-color: #27355F;
-    width: 500px;
-    padding: 2rem;
+.balance-disponible{
+    background-color: var(--primario);
+    font-size: 24px;
     border-radius: 8px;
-    max-height: 250px;
+    padding: 0.5rem;
+    margin: 1rem 0;
+    font-weight: 500;
+    display: flex;
+    align-items: center; 
 }
 
-.calendario {
+.ultimoMovimiento{
+    flex: 1;
+}
+.ultimoMovimiento h2{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.ultimoMovimiento-Box {
     background-color: var(--secundario);
-    color: #ffffff;
-    padding: 2rem;
     border-radius: 8px;
+    margin: 1rem 0;
+    padding: 1rem 2rem;
 }
 
-.meses{
+.listaUltimosMovimientos{
+    margin: 1.3rem 0;
+    font-size: 20px;
+    padding: 0;
+    height: 24rem;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
+    color: var(--blanco);
+    list-style-type: none;
 }
 
-.grid{
-    margin: 1rem;
-    display:grid;
-    grid-template-columns: repeat(28, 16px);
-    gap: 6px;
+.etiqueta{
+    color: var(--verde);
+    font-weight: 500;
 }
 
-.dia {
-    width: 16px;
-    height: 16px;
-    border-radius: 2px;
+.historialMovimientos{
+    text-align: right;
+    margin-right: 0.5rem;
+    font-size: 20px;
+    font-weight: 500;
 }
 
-.leyenda {
-    display: flex;
-    align-items: center;
-    justify-content:end;
-    gap:8px;
-    font-family: poppins, sans-serif;;
-}
-.niveles {
-    display: flex;
-    gap: 4px;
-    align-items: center;
-
+.ultimoMovimiento a{
+    position: relative;
 }
 
-.nivel{
-    width:16px;
-    height: 16px;
-    border-radius: 2px;
+.ultimoMovimiento a::after{
+    position: absolute;
+    content: "";
+    bottom: 0px;
+    left: 0px;
+    background-color: var(--secundario);
+    height: 3px;
+    transition: width 0.3s ease;
+    width: 0;
 }
 
-.leyenda-mas{
-    margin-right:2rem;
+.ultimoMovimiento a:hover::after{
+    width: 100%;
 }
+
 
 .listaBarra{
     list-style-type: none;
@@ -201,7 +228,6 @@ td img {
     font-size: 20px;
     font-weight: 600;
     color: var(--secundario);
-    width: 550px;
 }
 
 .progreso{
@@ -218,22 +244,50 @@ td img {
 
 }
 
+.fila{
+    display: flex;
+    justify-content: space-between;
+}
+
+#ServiciosImg {
+    width: 12px;
+    height: 16px;
+}
+
+#TransporteImg {
+    width: 15px;
+    height: 16px;
+}
+
+.listaBarra li {
+    width: 550px;
+    margin-bottom: 2rem;
+}
+
+.presupuesto {
+    margin-right:1rem;
+}
+.monto {
+    margin-right:1rem;
+    font-weight: 500;
+}
+
+.agregarPresupuesto{
+    text-align: right;
+    margin-right: 2rem;
+    font-size: 20px;
+    font-weight: 500;
+}
+
 .verMas{
     text-align: right;
     margin-right: 2rem;
     font-size: 20px;
     font-weight: 500;
-    
-}
-a{
-    color: var(--secundario);
-    text-decoration: none;
-
 }
 
 .barras a{
     position: relative;
-
 }
 
 .barras a::after{
@@ -251,3 +305,7 @@ a{
     width: 100%;
 }
 
+.barras {
+    margin-top: 3rem;
+    justify-content: space-between;
+}

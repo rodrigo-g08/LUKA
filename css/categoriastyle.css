@@ -20,15 +20,10 @@ body{
     background-color: #F0F0F0;
 }
 
-button{
-    font-family: poppins, sans-serif;
-    font-weight: bold;
-}
-
 .nav-bg{
     background-color: var(--secundario);
+
     width: 100vw;
-    
 }
 
 .navegacion-principal {   
@@ -67,6 +62,7 @@ button{
     width: 100%;
 }
 
+
 #Logo {
     width: 132px;
     height: 38px;
@@ -86,66 +82,85 @@ button{
     height: 25px;
 
 }
-.contenedor {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    height: 100vh;
+
+
+.logo img {
+  height: 40px;
+  display: block;
 }
 
-.izquierda {
-    background-color: B9B9B9;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 50vw;
+.logo {
+  display: flex;
+  align-items: center;
 }
 
-.contenido-izq {
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    text-align: left;
-    width: 47%;
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
 }
 
-.contenido-izq label {
-    font-size: 1.4rem;
-    font-weight:500;
-    margin-bottom: 3px;
+nav li {
+  cursor: pointer;
+  font-weight: 600;
+  color: white;
+  background-color: transparent;
+  padding: 8px 12px;
 }
 
-.contenido-izq input {
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
+nav li.active {
+  background-color: #cccccc;
+  color: #27355F;
+  border-radius: 4px;
+}
+h1{
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--secundario);
+    margin: 0rem 18rem;
+    font-family: poppins, sans-serif;
+    margin-top: 2rem;
 }
 
-.contenido-izq button {
-    background-color: #E3C65F;
-    border: none;
-    border-radius: 5px;
-    padding: 9px 20px;
-    margin-top: 15px;
+.categorias {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 30px;
+  background-color: #2e3960;
+  padding: 40px;
+  margin: 30px auto;
+  width: 90%;
+  border-radius: 12px;
+  box-sizing: border-box;
 }
 
-.derecha {
-    display: flex;
-    width: 50vw;
+.categoria {
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
 }
 
-.mensaje {
-    font-size: 1.4rem;
-    margin: 0.5rem 0;
-    display: none;
+.icono {
+  width: 80px;
+  height: 80px;
+  background-color: #e1c25c;
+  border-radius: 50%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: #2e3960;
+  transition: transform 0.2s;
 }
 
-input:valid ~ .exito {
-    display: block;
-    color: green;
+.categoria:hover .icono {
+  transform: scale(1.1);
 }
 
-input:invalid:focus ~ .error {
-    display: block;
-    color: red;
+.nombre {
+  margin-top: 10px;
 }
