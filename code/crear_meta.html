@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luka | Metas de ahorro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/crearmeta.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="nav-bg">
+        <nav class="navegacion-principal">
+            <a href="../code/MiBalance.html"> <img src="../img/Logo.png" id="Logo"> </a>
+            <a href="../code/MiBalance.html" class="opciones">Mi Balance</a>
+            <a href="#" class="opciones">Categorias</a>
+            <a href="#" class="opciones">Resumen Financiero</a>
+            <a href="../code/invitar_pareja.html" class="opciones">Invitar Pareja</a>
+            <a ref="#"> <img src="../img/Notificacion.png" id="NotificacionesImg"> </a>
+            <a ref="#"> <img src="../img/Moneda.png" id="MonedaImg"> </a>
+        </nav>
+    </header>
+
+<main class="main">
+    <header>
+        <h1 class="titulo">Metas de ahorro</h1>
+    </header>
+    <div class="registro-container">
+        <div class="registro">
+            <h2 class="titulo">Crear meta de ahorro</h2>
+            <form class="formularios" id="formMetas">
+                <div id="formulario1" class="formulario activo">
+                    <div>
+                        <label for="categoria">Ingresa Categoria</label>
+                        <input type="text" id="categoria" name="categoria" placeholder="">
+                    </div>
+                    <div>
+                        <label for="monto1">Digite Monto</label>
+                        <input type="number" id="monto1" name="monto1" placeholder="">  <!-- CAMBIO AQUÍ -->
+                    </div>
+                </div>
+                <div id="formulario2" class="formulario">
+                    <div>
+                        <label for="metaAhorro">Ingrese Meta de Ahorros</label>
+                        <input type="text" id="metaAhorro" name="metaAhorro" placeholder="">  <!-- CAMBIO AQUÍ -->
+                    </div>
+                    <div>
+                        <label for="monto">Digite Monto</label>
+                        <input type="number" id="monto" name="monto" placeholder="">
+                    </div>
+                </div>
+                <div class="boton-guardar-container">
+                    <button type="button" id="btnGuardar" class="boton-guardar" onclick="validarFormulario(event)">Guardar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</main>
+
+<div id="notificacion" class="toast"></div>
+
+<script src="../js/crearmeta.js"></script>
+
+</body>
+</html>

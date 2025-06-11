@@ -22,6 +22,8 @@ body{
 
 .nav-bg{
     background-color: var(--secundario);
+
+    width: 100vw;
 }
 
 .navegacion-principal {   
@@ -110,7 +112,9 @@ a{
 }
 
 .balance{
+
     flex: 0 0 200px;
+
     color: var(--secundario);
 }
 

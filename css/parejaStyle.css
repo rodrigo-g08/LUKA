@@ -1,0 +1,147 @@
+:root{
+    --blanco: #ffffff;
+    --oscuro: #212121;
+    --primario: #D9D9D9;
+    --secundario: #27355F;
+    --verde: #95A57C ;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 16px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: poppins, sans-serif;
+    background-color: #F0F0F0;
+}
+
+button{
+    font-family: poppins, sans-serif;
+    font-weight: bold;
+}
+
+.nav-bg{
+    background-color: var(--secundario);
+    width: 100vw;
+    
+}
+
+.navegacion-principal {   
+    width: 120rem;
+    margin: 0 auto; 
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+}
+
+.navegacion-principal a {
+    display: flex;
+    align-items: center; 
+    color: var(--blanco);
+    font-size: 2rem;
+    text-decoration: none;
+    font-weight: 500;
+    
+}
+
+.navegacion-principal .opciones{
+    position: relative;
+}
+
+.navegacion-principal .opciones::after{
+    background-color: #F0F0F0;
+    position: absolute;
+    height: 6px; 
+    bottom: 0px;
+    content:"";
+    width: 0;
+    transition: width 0.3s ease;
+}
+
+.navegacion-principal .opciones:hover::after{
+    width: 100%;
+}
+
+#Logo {
+    width: 132px;
+    height: 38px;
+}
+
+#NotificacionesImg {
+    width: 22px;
+    height: 22px;
+}
+
+#MonedaImg {
+    width: 18px;
+    height: 18px;
+}
+
+.contenedor {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+}
+
+.izquierda {
+    background-color: B9B9B9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+}
+
+.contenido-izq {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    text-align: left;
+    width: 47%;
+}
+
+.contenido-izq label {
+    font-size: 1.4rem;
+    font-weight:500;
+    margin-bottom: 3px;
+}
+
+.contenido-izq input {
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.contenido-izq button {
+    background-color: #E3C65F;
+    border: none;
+    border-radius: 5px;
+    padding: 9px 20px;
+    margin-top: 15px;
+}
+
+.derecha {
+    display: flex;
+    width: 50vw;
+}
+
+.mensaje {
+    font-size: 1.4rem;
+    margin: 0.5rem 0;
+    display: none;
+}
+
+input:valid ~ .exito {
+    display: block;
+    color: green;
+}
+
+input:invalid:focus ~ .error {
+    display: block;
+    color: red;
+}
