@@ -1,0 +1,302 @@
+:root{
+    --blanco: #ffffff;
+    --oscuro: #212121;
+    --primario: #D9D9D9;
+    --secundario: #27355F;
+    --verde: #95A57C ;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 16px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: poppins, sans-serif;
+    background-color: #F0F0F0;
+}
+
+.nav-bg{
+    background-color: var(--secundario);
+}
+
+.navegacion-principal {   
+    width: 120rem;
+    margin: 0 auto; 
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+}
+
+.navegacion-principal a {
+    display: flex;
+    align-items: center; 
+    color: var(--blanco);
+    font-size: 2rem;
+    text-decoration: none;
+    font-weight: 500;
+    
+}
+
+.navegacion-principal .opciones{
+    position: relative;
+}
+
+.navegacion-principal .opciones::after{
+    background-color: #F0F0F0;
+    position: absolute;
+    height: 6px; 
+    bottom: 0px;
+    content:"";
+    width: 0;
+    transition: width 0.3s ease;
+}
+
+.navegacion-principal .opciones:hover::after{
+    width: 100%;
+}
+
+
+#Logo {
+    width: 132px;
+    height: 38px;
+}
+
+#NotificacionesImg {
+    width: 22px;
+    height: 22px;
+}
+
+#MonedaImg {
+    width: 18px;
+    height: 18px;
+}
+
+main {
+    padding-top:  2rem;
+}
+
+
+h1{
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--secundario);
+    margin: 0rem 18rem;
+}
+
+h2{
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--secundario);
+}
+
+p{
+    font-size: 20px;
+}
+
+a{
+    color: var(--secundario);
+    text-decoration: none;
+}
+
+.contenedor{
+    margin: 0  18rem;
+    display: flex;
+    gap: 10rem;
+}
+
+.balance{
+    flex: 0 0 200px;
+    color: var(--secundario);
+}
+
+.balance h2{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.balance a{
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 500;
+    position: relative;
+    margin: 0.5rem 1rem;
+}
+
+
+.balance a::after{
+    position: absolute;
+    content:"";
+    bottom: 0px;
+    left: 0px;
+    height: 3px;
+    width: 0;
+    background-color: var(--secundario);
+    transition: width 0.3s ease;
+}
+
+.balance a:hover::after{
+    width: 100%;
+}
+
+.balance-disponible{
+    background-color: var(--primario);
+    font-size: 24px;
+    border-radius: 8px;
+    padding: 0.5rem;
+    margin: 1rem 0;
+    font-weight: 500;
+    display: flex;
+    align-items: center; 
+}
+
+.ultimoMovimiento{
+    flex: 1;
+}
+.ultimoMovimiento h2{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.ultimoMovimiento-Box {
+    background-color: var(--secundario);
+    border-radius: 8px;
+    margin: 1rem 0;
+    padding: 1rem 2rem;
+}
+
+.listaUltimosMovimientos{
+    margin: 1.3rem 0;
+    font-size: 20px;
+    padding: 0;
+    height: 24rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: var(--blanco);
+    list-style-type: none;
+}
+
+.etiqueta{
+    color: var(--verde);
+    font-weight: 500;
+}
+
+.historialMovimientos{
+    text-align: right;
+    margin-right: 0.5rem;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.ultimoMovimiento a{
+    position: relative;
+}
+
+.ultimoMovimiento a::after{
+    position: absolute;
+    content: "";
+    bottom: 0px;
+    left: 0px;
+    background-color: var(--secundario);
+    height: 3px;
+    transition: width 0.3s ease;
+    width: 0;
+}
+
+.ultimoMovimiento a:hover::after{
+    width: 100%;
+}
+
+
+.listaBarra{
+    list-style-type: none;
+    padding: 0 1rem;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--secundario);
+}
+
+.progreso{
+    background-color: var(--secundario);
+    height: 1.5rem;
+    border-radius: 8px;
+    margin: 0.5rem 0;
+}
+
+.relleno{
+    background-color: var(--verde);
+    height: 1.5rem;
+    border-radius: 8px;
+
+}
+
+.fila{
+    display: flex;
+    justify-content: space-between;
+}
+
+#ServiciosImg {
+    width: 12px;
+    height: 16px;
+}
+
+#TransporteImg {
+    width: 15px;
+    height: 16px;
+}
+
+.listaBarra li {
+    width: 550px;
+    margin-bottom: 2rem;
+}
+
+.presupuesto {
+    margin-right:1rem;
+}
+.monto {
+    margin-right:1rem;
+    font-weight: 500;
+}
+
+.agregarPresupuesto{
+    text-align: right;
+    margin-right: 2rem;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.verMas{
+    text-align: right;
+    margin-right: 2rem;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.barras a{
+    position: relative;
+}
+
+.barras a::after{
+    position: absolute;
+    content: "";
+    bottom: 0px;
+    left: 0px;
+    background-color: var(--secundario);
+    height: 3px;
+    transition: width 0.3s ease;
+    width: 0;
+}
+
+.barras a:hover::after{
+    width: 100%;
+}
+
+.barras {
+    margin-top: 3rem;
+    justify-content: space-between;
+}
