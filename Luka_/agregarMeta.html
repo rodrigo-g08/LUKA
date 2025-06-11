@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Añadir Meta de Ahorro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/agregarMetastyle.css">
+</head>
+<body>
+    <div class="nav-bg">
+        <nav class="navegacion-principal">
+            <a href="mibalance.html"><img src="img/Logo.png" id="Logo"></a>
+            <a href="miBalance.html" class="opciones">Mi Balance</a>
+            <a href="#" class="opciones">Categorias</a>
+            <a href="resumenFinanciero.html" class="opciones">Resumen Financiero</a>
+            <a href="#" class="opciones">Invitar Pareja</a>
+            <a href="notificaciones.html"><img src="img/Notificacion.png" id="NotificacionesImg"></a>
+            <a href="#"><img src="img/Moneda.png" id="MonedaImg"></a>
+        </nav>
+    </div>
+
+    <main class="main">
+        <div class="modal-meta">
+            <div class="modal-header">
+                <h2>Agregar Meta de Ahorro</h2>
+                <button class="cerrar" onclick="window.location.href='metasAhorro.html'">✕</button>
+            </div>
+            <div class="modal-body">
+                <label>Ingrese nombre de la meta</label>
+                <input type="text" placeholder="Ej: Comprar bicicleta">
+                
+                <label>Digite monto</label>
+                <input type="number" placeholder="Ej: 1500">
+                
+                <label>Seleccionar fecha</label>
+                <input type="date">
+                
+                <button class="btn-guardar" onclick="guardarMeta()">Guardar</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
