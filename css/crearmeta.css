@@ -1,0 +1,298 @@
+:root{
+    --blanco: #ffffff;
+    --oscuro: #212121;
+    --primario: #D9D9D9;
+    --secundario: #27355F;
+    --verde: #95A57C ;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 16px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: poppins, sans-serif;
+    background-color: #F0F0F0;
+}
+
+.nav-bg{
+    background-color: var(--secundario);
+}
+
+.navegacion-principal {   
+    width: 120rem;
+    margin: 0 auto; 
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+}
+
+.navegacion-principal a {
+    display: flex;
+    align-items: center; 
+    color: var(--blanco);
+    font-size: 2rem;
+    text-decoration: none;
+    font-weight: 500;
+    
+}
+
+.navegacion-principal .opciones{
+    position: relative;
+}
+
+.navegacion-principal .opciones::after{
+    background-color: #F0F0F0;
+    position: absolute;
+    height: 6px; 
+    bottom: 0px;
+    content:"";
+    width: 0;
+    transition: width 0.3s ease;
+}
+
+.navegacion-principal .opciones:hover::after{
+    width: 100%;
+}
+
+
+#Logo {
+    width: 132px;
+    height: 38px;
+}
+
+#NotificacionesImg {
+    width: 22px;
+    height: 22px;
+}
+
+#MonedaImg {
+    width: 18px;
+    height: 18px;
+}
+
+main {
+    padding-top:  2rem;
+}
+
+
+/* Mejorar responsividad del h1 */
+h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--secundario);
+    margin: 0 2rem; /* Cambiar de 18rem a 2rem para mejor responsividad */
+    text-align: center; /* Centrar el título */
+}
+
+h2{
+    color: var(--secundario);
+}
+
+button {
+    font-family: poppins, sans-serif;
+    color: var(--secundario);
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.registro-container{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+}
+
+.botones .activo::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background-color: var(--secundario);
+    transition: width 0.3s ease;
+}
+
+/* Hacer el formulario más responsivo */
+.formularios {
+    width: 100%;
+    max-width: 400px; /* Usar max-width en lugar de width fijo */
+    color: var(--secundario);
+}
+
+/* Agregar espaciado consistente entre campos */
+.formularios div {
+    margin-bottom: 1rem; /* Espaciado entre campos del formulario */
+}
+
+.formulario {
+    display: none;
+    margin-Left: 2rem;
+}
+
+.formulario.activo{
+    display: block;
+}
+.boton-guardar-container{
+    margin-top: 3rem;
+    text-align: right;
+}
+
+.boton-guardar {
+    padding: 0;
+    border:none;
+    position: relative;
+}
+
+.boton-guardar::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 0%;
+    background-color: var(--secundario);
+    transition: width 0.3s ease;
+}
+
+.boton-guardar:hover::after {
+    width: 100%;
+}
+
+main a {
+    padding: 0;
+    margin-right: 1rem;
+    position: relative;
+}
+
+a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 0%;
+    background-color: var(--secundario);
+    transition: width 0.3s ease;
+}
+
+a:hover::after {
+    width: 100%;
+}
+
+a {
+    font-family: poppins, sans-serif;
+    font-size: 20px;
+    color: var(--secundario);
+    font-weight: 600;
+    text-decoration: none;
+    position: relative;
+}
+
+.formularios label {
+    margin-top: 1.2rem;
+    margin-bottom: 0.5rem;
+    display: block;
+    font-weight: 600;
+}
+
+/* Mejorar responsividad de inputs */
+input {
+    padding: 0.5rem;
+    font-size: 16px;
+    border-radius: 8px;
+    outline: none;
+    border: 2px solid #ccc;
+    width: 100%; /* Usar 100% en lugar de 270px fijo */
+    max-width: 270px;
+    font-family: poppins, sans-serif;
+    box-sizing: border-box; /* Incluir padding en el ancho total */
+}
+
+/* Mejorar el focus de los inputs */
+input:focus {
+    border-color: var(--secundario);
+    box-shadow: 0 0 0 2px rgba(var(--secundario-rgb), 0.2); /* Si tienes la variable RGB */
+}
+
+#notificacion {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    min-width: 250px;
+    background-color: var(--verde);
+    color: var(--blanco);
+    font-family: poppins, sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 5px;
+    padding: 1rem;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1000;
+}
+
+#notificacion.mostrar {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Para notificaciones de error */
+#notificacion.error {
+    background-color: #f44336;
+}
+
+/* Para notificaciones de éxito */
+#notificacion.exito {
+    background-color: var(--verde);
+}
+
+.toast {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #f44336;
+    color: white;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+    transition: visibility 0s, opacity 0.5s linear;
+}
+
+.toast.mostrar {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Media query para móviles */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 24px;
+        margin: 0 1rem;
+    }
+    
+    .formularios {
+        max-width: 300px;
+    }
+    
+    .formulario {
+        margin-left: 1rem;
+    }
+    
+    input {
+        max-width: 100%;
+    }
+}

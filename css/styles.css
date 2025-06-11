@@ -22,6 +22,7 @@ body{
 
 .nav-bg{
     background-color: var(--secundario);
+    width: 100vw;;
 }
 
 .navegacion-principal {   

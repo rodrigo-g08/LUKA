@@ -64,7 +64,7 @@ button{
 }
 
 .navegacion-principal .opciones:hover::after{
-    width: 100vw;
+    width: 100%;
 }
 
 #Logo {
