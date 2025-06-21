@@ -4,7 +4,7 @@
   --amarillo: #E3C65F;
   --blanco: #FFFFFF;
   --negro: #000000;
-}
+} 
 
 * {
   box-sizing: border-box;
@@ -88,6 +88,18 @@ input {
   font-size: 1rem;
   margin-bottom: 10px;
 }
+
+.input-error {
+  border: 1.5px solid #e53935;
+  background-color: #fdecea;
+  color: #e53935;
+}
+
+.label-error {
+  color: #e53935;
+  font-weight: 600;
+}
+
 
 button {
   padding: 12px;
