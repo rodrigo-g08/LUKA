@@ -70,6 +70,7 @@ body {
     height: 25px;
 
 }
+
 .main {
     padding-top: 2rem;
     flex: 1;
@@ -111,13 +112,14 @@ body {
 }
 
 .modal-body input {
-    width: 100%;
+    width: 96%;
     padding: 0.5rem;
-    margin-top: 0.3rem;
+    margin-top: 10px;
     border: none;
     border-radius: 6px;
     background-color: var(--primario);
     font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
 }
 
 .btn-guardar {
@@ -129,7 +131,7 @@ body {
     font-weight: bold;
     border-radius: 8px;
     cursor: pointer;
-    width: 100%;
+    width: 99%;
 }
 
 .mensaje-exito {
@@ -137,7 +139,7 @@ body {
     top: 80px;
     left: 0;
     width: 100%;
-    background-color: #00c853; /* Verde */
+    background-color: #00c853;
     color: white;
     text-align: center;
     padding: 15px 10px;
