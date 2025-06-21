@@ -24,6 +24,20 @@ function mostrarNotificacion(event, mesage){
     }, 1200);
 }
 
+function mostrarNotificacion2(event, mesage){
+    event.preventDefault();
+
+    const notification = document.getElementById("notificacion");
+    notification.textContent = mesage;
+    notification.classList.add("mostrar");
+
+    setTimeout(() => {
+        notification.classList.remove("mostrar");
+        window.location.href = "metas_de_ahorro.html";
+    }, 1200);
+}
+
+
 const ctx = document.getElementById('graficoIngresosGastos');
 
 

@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/ahorroStyle.css">
+    <link rel="stylesheet" href="css/metas_de_ahorro.css">
 </head>
 <body>
     <!-- Header -->
@@ -27,10 +27,14 @@
 
     <!-- Main Content -->
     <main class="main">
+
+        <h1>Mi Balance</h1>
+        <div class="cajaElementos">
         <div class="page-container">
-            <div class="page-header">
-                <h1 class="page-title">Metas de ahorro</h1>
-                <button class="new-goal-btn" id="btnRedirigir" onclick="nuevaMeta()">Nueva Meta</button>
+            
+            <h2>Metas de ahorro</h2>
+            <div class="agregarMeta">
+                <a href = "agregarMeta.html">Nueva Meta</a>
             </div>
             
             <div class="goals-container">
@@ -65,8 +69,11 @@
                                 <button class="delete-btn">🗑️</button>
                             </div>
                         </div>
+
+                        <div class="bottonAgregar">
+                        <a href = "registrarIngreso.html">Agregar Ingreso</a>
+                        </div>
                         
-                        <button class="add-income-btn" onclick="progresoMeta()">Agregar Ingreso</button>
                     </div>
                 </div>
 
@@ -101,13 +108,14 @@
                                 <button class="delete-btn">🗑️</button>
                             </div>
                         </div>
-                        
-                        <button class="add-income-btn" onclick="progresoMeta()">Agregar Ingreso</button>
+                        <div class="bottonAgregar">
+                        <a href = "registrarIngreso.html">Agregar Ingreso</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        </div>
     </main>
-    <script src="scripts/metascript.js"></script>
 </body>
 </html>
