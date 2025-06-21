@@ -1,39 +1,50 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Añadir Meta de Ahorro</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/agregarCategoria.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Añadir Meta de Ahorro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/agregarCategoria.css">
 </head>
 <body>
-    <div class="nav-bg">
-        <nav class="navegacion-principal">
-            <a href="miBalance.html"> <img src="img/Logo.png" id="Logo"> </a>
-            <a href="miBalance.html" class="opciones">Mi Balance</a>
-            <a href="categorias.html" class="opciones">Categorias</a>
-            <a href="resumenFinanciero.html" class="opciones">Resumen Financiero</a>
-            <a href="invitar_pareja.html" class="opciones">Invitar Pareja</a>
-            <a href="notificaciones.html"><img src="img/Notificacion.png" id="NotificacionesImg"></a>
-            <a href="#"><img src="img/Moneda.png" id="MonedaImg"></a>
-            <a href="login.html"><img src="img/salir.png" id="LogOutImg"></a>
-        </nav>
-    </div>
+  <div class="nav-bg">
+    <nav class="navegacion-principal">
+      <a href="miBalance.html"> <img src="img/Logo.png" id="Logo"> </a>
+      <a href="miBalance.html" class="opciones">Mi Balance</a>
+      <a href="categorias.html" class="opciones">Categorias</a>
+      <a href="resumenFinanciero.html" class="opciones">Resumen Financiero</a>
+      <a href="invitar_pareja.html" class="opciones">Invitar Pareja</a>
+      <a href="notificaciones.html"><img src="img/Notificacion.png" id="NotificacionesImg"></a>
+      <a href="#"><img src="img/Moneda.png" id="MonedaImg"></a>
+      <a href="login.html"><img src="img/salir.png" id="LogOutImg"></a>
+    </nav>
+  </div>
     
-    <main class="main">
-      <div class="modal">
-        <button class="close-btn" onclick="returnCategorias()">&times;</button>
-        <h2>Agregar Categoría</h2>
-        <label for="categoria">Ingrese nombre de nueva categoría:</label>
-        <input type="text" id="categoria" placeholder="Escribe aquí...">
-        <button class="guardar-btn" onclick="returnCategorias()">Guardar</button>
-      </div>
-    </main>
+<main class="main">
+  <div class="modal-meta">
+    <div class="modal-header">
+      <h2>Agregar Categoría</h2>
+      <button class="cerrar" onclick="window.location.href='categorias.html'">✕</button>
+    </div>
 
-<script src="scripts/main.js"></script>
+    <div class="modal-body">
+      <label for="categoria">Ingrese nombre de nueva categoría:</label>
+      <input type="text" id="categoria" placeholder="Escribe aquí...">
+      <button class="btn-guardar" onclick="guardarCategoria()">Guardar</button>
+    </div>
+  </div>
+
+  <!-- Mensaje de confirmación -->
+  <div id="mensajeConfirmacion" class="mensaje-exito oculto">
+    <span id="textoMensaje">Categoría registrada con éxito!</span>
+    <button onclick="cerrarMensaje()">✕</button>
+  </div>
+</main>
+
+<script src="scripts/agregarCategoria.js"></script>
 
 </body>
 </html>

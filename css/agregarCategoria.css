@@ -79,60 +79,86 @@ body {
     align-items: center;
 }
 
-.modal {
-  background-color: #f0f0f0;
-  padding: 30px 40px;
-  width: 400px;
-  position: relative;
+.modal-meta {
+    background-color: #F0F0F0;
+    padding: 2rem;
+    border-radius: 12px;
+    width: 300px;
+    color: var(--secundario);
+
+    position: relative;
 }
 
-.modal h2 {
-  color: var(--secundario);
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 20px;
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.modal label {
-  color: var(--secundario);
-  font-weight: 600;
-  display: block;
-  margin-bottom: 10px;
+.modal-header h2 { margin: 0; }
+
+.cerrar {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    color: var(--secundario);
+    cursor: pointer;
 }
 
-.modal input[type="text"] {
-  width: 100%;
-  padding: 10px;
-  border: none;
-  border-radius: 6px;
-  background-color: #1b2136;
-  color: white;
-  font-size: 16px;
+.modal-body label {
+    display: block;
+    margin-top: 1rem;
+    font-size: 1rem;
 }
 
-.guardar-btn {
-  margin-top: 20px;
-  background-color: #f4cd62;
-  border: none;
-  width: 105%;
-  padding: 10px 20px;
-  border-radius: 8px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.3s;
+.modal-body input {
+    width: 96%;
+    padding: 0.5rem;
+    margin-top: 10px;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--primario);
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
 }
 
-.guardar-btn:hover {
-  background-color: #e6b93e;
+.btn-guardar {
+    margin-top: 1.5rem;
+    background-color: var(--amarillo);
+    color: var(--oscuro);
+    border: none;
+    padding: 0.6rem 1.2rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 99%;
 }
 
-.close-btn {
-  position: absolute;
-  top: 40px;
-  right: 15px;
-  background: none;
-  border: none;
-  font-size: 20px;
-  color: var(--secundario);
-  cursor: pointer;
+.mensaje-exito {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background-color: #00c853;
+    color: white;
+    text-align: center;
+    padding: 15px 10px;
+    font-weight: bold;
+    font-size: 1.5rem;
+    z-index: 9999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mensaje-exito button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+.oculto {
+    display: none;
 }
