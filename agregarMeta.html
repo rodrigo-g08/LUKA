@@ -27,23 +27,29 @@
         <div class="modal-meta">
             <div class="modal-header">
                 <h2>Agregar Meta de Ahorro</h2>
-                <button class="cerrar" onclick="window.location.href='metasAhorro.html'">✕</button>
+                <button class="cerrar" onclick="window.location.href='metas_de_ahorro.html'">✕</button>
             </div>
             <div class="modal-body">
                 <label>Ingrese nombre de la meta</label>
-                <input type="text" placeholder="Ej: Comprar bicicleta">
-                
+                <input type="text" id="nombreMeta" placeholder="Ej: Comprar bicicleta">
+
                 <label>Digite monto</label>
-                <input type="number" placeholder="Ej: 1500">
-                
+                <input type="number" id="montoMeta" placeholder="Ej: 1500">
+
                 <label>Seleccionar fecha</label>
-                <input type="date">
+                <input type="date" id="fechaMeta">
+
                 
                 <button class="btn-guardar" onclick="guardarMeta()">Guardar</button>
             </div>
         </div>
     </main>
 
-    <script src="scripts/main.js"></script>
+    <div id="mensajeConfirmacion" class="mensaje-exito oculto">
+        Meta creada con éxito!
+        <button onclick="cerrarMensaje()">✕</button>
+    </div>
+
+    <script src="scripts/agregarMeta.js"></script>
 </body>
 </html>
