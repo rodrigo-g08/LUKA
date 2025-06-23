@@ -11,28 +11,37 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 1.8rem 4rem;
   flex-wrap: wrap;
 }
 
 .navbar img {
-  height: 40px;
+  height: 58px;
+}
+
+.navbar nav {
+  display: flex;
+  gap: 4rem;
+  flex: 1;
+  justify-content: center;
 }
 
 .navbar nav a {
-  margin: 0 1rem;
   text-decoration: none;
   color: white;
-  font-weight: 500;
+  font-weight: 700;
+  font-size: 1.6rem;
 }
 
 .boton-sesion {
-  background: #FFD700;
+  background: #e5c04c;
   border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
+  padding: 1rem 2rem;
+  border-radius: 6px;
   font-weight: bold;
   cursor: pointer;
+  font-size: 1.15rem;
+  color: #1c1c1c;
 }
 
 .hero {
@@ -41,65 +50,79 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding: 3rem 2rem;
+  padding: 6rem 7rem;
 }
 
 .hero-texto {
-  max-width: 500px;
+  max-width: 700px;
 }
 
 .hero-texto h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+  font-size: 5.2rem;
+  margin-bottom: 2rem;
   color: #101828;
 }
 
+.hero-texto p {
+  font-size: 2rem;
+}
+
 .hero-img {
-  max-width: 250px;
+  max-width: 540px;
 }
 
 .boton-empezar {
-  margin-top: 1rem;
-  background: #FFD700;
+  margin-top: 2rem;
+  background: #e5c04c;
   border: none;
-  padding: 0.7rem 1.2rem;
-  border-radius: 5px;
+  padding: 1.2rem 2.2rem;
+  border-radius: 6px;
   cursor: pointer;
   font-weight: bold;
+  font-size: 1.3rem;
+  color: #1c1c1c;
 }
 
 .servicios {
   background: white;
-  padding: 3rem 2rem;
+  padding: 5.5rem 7rem;
 }
 
 .servicios h2 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
+  font-size: 3rem;
+  margin-bottom: 1rem;
   color: #101828;
 }
 
 .sub {
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   color: #475467;
+  font-size: 1.7rem;
 }
 
 .grid-servicios {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  justify-items: center;
 }
 
 .item-servicio {
   background: #F2F4F7;
-  padding: 1rem;
+  padding: 3rem;
   border-radius: 10px;
   text-align: center;
+  width: 85%;
 }
 
 .item-servicio img {
-  height: 50px;
-  margin-bottom: 0.5rem;
+  height: 140px;
+  margin-bottom: 1.5rem;
+}
+
+.item-servicio span {
+  font-size: 2rem;
+  font-weight: 600;
 }
 
 .sobre-nosotros {
@@ -108,63 +131,67 @@ body {
   align-items: center;
   justify-content: center;
   background: #FFFFFF;
-  padding: 3rem 2rem;
-  gap: 2rem;
+  padding: 5.5rem 7rem;
+  gap: 4rem;
 }
 
 .columna {
   flex: 1;
-  max-width: 300px;
+  max-width: 500px;
   text-align: justify;
+  font-size: 2rem;
+  line-height: 1.8;
 }
 
 .logo-centro {
-  height: 120px;
+  height: 300px;
 }
 
 .testimonios {
   background: #1D2939;
   color: white;
-  padding: 3rem 2rem;
+  padding: 5.5rem 7rem;
 }
 
 .testimonios h2 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
+  font-size: 3rem;
+  margin-bottom: 3rem;
   text-align: center;
 }
 
 .grid-testimonios {
   display: flex;
   justify-content: space-around;
-  gap: 1rem;
+  gap: 2.5rem;
   flex-wrap: wrap;
 }
 
 .testimonio {
-  max-width: 250px;
+  max-width: 360px;
   text-align: center;
+  font-size: 1.8rem;
+  line-height: 1.7;
 }
 
 .testimonio img {
   border-radius: 50%;
-  width: 80px;
-  height: 80px;
+  width: 135px;
+  height: 135px;
   object-fit: cover;
-  margin-top: 0.5rem;
+  margin-top: 1rem;
 }
 
 .testimonio strong {
   display: block;
-  margin-top: 0.5rem;
-  font-size: 0.9rem;
+  margin-top: 0.7rem;
+  font-size: 1.5rem;
   color: #FFD700;
 }
 
 .footer {
   background: #101828;
   color: white;
-  padding: 2rem;
+  padding: 4rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -172,36 +199,83 @@ body {
 }
 
 .logo-footer {
-  height: 40px;
+  height: 65px;
   margin-bottom: 1rem;
 }
 
 .enlaces, .redes {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 2rem;
   justify-content: center;
-  margin-bottom: 1rem;
+  margin-bottom: 1.8rem;
 }
 
 .enlaces a {
   color: white;
   text-decoration: none;
   font-weight: 500;
+  font-size: 1.4rem;
 }
 
 .redes img {
-  height: 24px;
-  width: 24px;
+  height: 34px;
+  width: 34px;
 }
 
-@media (max-width: 768px) {
+.contacto-footer p {
+  margin: 0.6rem 0;
+  font-size: 1.3rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .navbar nav {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .navbar nav a {
+    font-size: 1.4rem;
+    margin: 0.5rem;
+  }
+  .hero-texto h1 {
+    font-size: 4rem;
+  }
+  .hero-texto p,
+  .boton-empezar,
+  .boton-sesion,
+  .sub,
+  .item-servicio span,
+  .columna,
+  .testimonio,
+  .testimonio strong,
+  .enlaces a,
+  .contacto-footer p {
+    font-size: 1.3rem;
+  }
+  .hero-img,
+  .item-servicio img,
+  .logo-centro,
+  .testimonio img,
+  .logo-footer,
+  .redes img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
   .hero {
     flex-direction: column;
+    align-items: center;
     text-align: center;
   }
-  .hero-texto {
-    max-width: 100%;
+  .grid-servicios {
+    grid-template-columns: 1fr;
   }
   .sobre-nosotros {
     flex-direction: column;
@@ -210,9 +284,32 @@ body {
     flex-direction: column;
     align-items: center;
   }
-}
-
-.contacto-footer p {
-  margin: 0.3rem 0;
-  font-size: 0.9rem;
+  .hero-texto h1 {
+    font-size: 3rem;
+  }
+  .hero-texto p {
+    font-size: 1.2rem;
+  }
+  .boton-empezar {
+    font-size: 1.1rem;
+    padding: 1rem 1.8rem;
+  }
+  .columna {
+    font-size: 1.2rem;
+  }
+  .item-servicio span {
+    font-size: 1.3rem;
+  }
+  .testimonio {
+    font-size: 1.2rem;
+  }
+  .testimonio strong {
+    font-size: 1.1rem;
+  }
+  .enlaces a {
+    font-size: 1.2rem;
+  }
+  .contacto-footer p {
+    font-size: 1.1rem;
+  }
 }
