@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,29 +20,48 @@
             <a href="resumenFinanciero.html" class="opciones">Resumen Financiero</a>
             <a href="invitar_pareja.html" class="opciones">Invitar Pareja</a>
             <a href="notificaciones.html"><img src="img/Notificacion.png" id="NotificacionesImg"></a>
-            <a href="cambioMoneda.html"><img src="img/Moneda.png" id="MonedaImg"></a>
+            <a href="#"><img src="img/Moneda.png" id="MonedaImg"></a>
             <a href="login.html"><img src="img/salir.png" id="LogOutImg"></a>
         </nav>
     </div>
 
-    <div class="container">
-        <div class="presupuesto-box">
-            <h1>Agregar Presupuesto</h1>
+
+    <main class="main">
+    <header>
+    <h1 class="titulo">Mi Balance</h1>
+    </header>
+    <div class="registro-container">
+    <div class="registro">
+            <h2 class="titulo">Agregar Presupuesto</h2>
+
             <form class="formularios">
-                <div class="campo">
-                    <label for="categoria">Ingresa Categoria de Presupuesto</label>
-                    <input type="text" id="categoria" name="categoria" placeholder="">
+
+                <div id="formulario1" class="formulario activo">
+                    
+                    <div>
+                        <label>Ingresa Categoria de Presupuesto</label>
+
+                        <input type="text" placeholder="">
+                    </div>
+
+                    <div>
+                        <label>Digite Monto Limite</label>
+
+                        <input type="number" placeholder="">
+                    </div>
+
                 </div>
-                <div class="campo">
-                    <label for="monto">Digite Monto Límite</label>
-                    <input type="number" id="monto" name="monto" placeholder="">
+
+                <div class="boton-guardar-container">
+                    <a href="miBalance.html" class="boton-guardar" onclick="mostrarNotificacion(event, 'Presupuesto Agregado')";> Guardar </a>
                 </div>
-                <button type="submit" class="boton-guardar" onclick="mostrarNotificacion(event, 'Presupuesto Agregado')">Guardar</button>
             </form>
-        </div>
     </div>
+    </div>
+    </main>
 
     <div id="notificacion" class="toast"></div>
+
     <script src="scripts/script.js"></script>
 </body>
 </html>

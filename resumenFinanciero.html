@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="preload" href="css/resumenStyle.css" as="style">
-    <link rel="stylesheet" href="css/resumenFinanciero.css">
+    <link rel="stylesheet" href="css/resumenStyle.css">
 </head>
 <body>
 
@@ -21,7 +21,7 @@
             <a href="resumenFinanciero.html" class="opciones">Resumen Financiero</a>
             <a href="invitar_pareja.html" class="opciones">Invitar Pareja</a>
             <a href="notificaciones.html"><img src="img/Notificacion.png" id="NotificacionesImg"></a>
-            <a href="cambioMoneda.html"><img src="img/Moneda.png" id="MonedaImg"></a>
+            <a href="#"><img src="img/Moneda.png" id="MonedaImg"></a>
             <a href="login.html"><img src="img/salir.png" id="LogOutImg"></a>
         </nav>
     </div>
@@ -36,76 +36,116 @@
 
 
     <div class="contenedor">
+        <section class="Ranking">
+                <h2>Ranking de Gastos</h2>
+
+                <div class="lista-Ranking">
+                <table class="tabla-gastos">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Categoria</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                         <tr>
+                             <td>01</td>
+                             <td><img src="img/ComidaIcon.png">Comida</td>
+                             <td>S/103.00</td>
+                        </tr>
+
+                         <tr>
+                            <td>02</td>
+                            <td><img src="img/EntretenimientoIcon.png">Entretenimiento</td>
+                            <td>S/90.00</td>
+                        </tr>
+
+                         <tr>
+                            <td>03</td>
+                            <td><img src="img/TransporteIcon.png">Transporte</td>
+                            <td>S/70.00</td>
+                        </tr>
+
+                         <tr>
+                            <td>04</td>
+                            <td><img src="img/CasaIcon.png">Renta</td>
+                            <td>S/45.00</td>
+                        </tr>
+
+                    </tbody>
+
+
+
+
+                </table>
+                </div>  
+        </section>
+        <section class="GastosMes">
+            <h2>Gastos del Mes</h2>
+            
+            <div class="calendario">
+                <div class="meses">
+                    <span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span>
+                </div>
+                <div class="grid" id="grid-dias"></div>
+                <div class="leyenda">
+                    <span>Monto gastado:</span>
+                    <span>Menos</span>
+                    <div class="niveles">
+                        <div class="nivel" style="background-color:#ffffff;"></div>
+                        <div class="nivel" style="background-color:#c4b885;"></div>
+                        <div class="nivel" style="background-color:#b0a14d;"></div>
+                        <div class="nivel" style="background-color:#88762c;"></div>
+                        <div class="nivel" style="background-color:#5f521c;"></div>
+                    </div>
+                    <span class="leyenda-mas">Mas</span>
+                </div>
+            </div>
+            
+        </section >
+        
+    </div>
+
+    <div class="contenedor barras">
         <section class="IngresosvsGastos">
             <h2>Ingresos vs Gastos</h2>
             <div class="tabla-vs">
                 <canvas id="graficoIngresosGastos"></canvas>
             </div>
 
-        </section> 
-    </div>
-
-    <div class="contenedor">
-        <section class="Ranking">
-            <h2>Ranking de Gastos</h2>
-
-            <div class="lista-Ranking">
-            <table class="tabla-gastos">
-                        <thead>
-                            <tr>
-                                <th>#</th>
-                                <th>Categoria</th>
-                                <th>Total</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>01</td>
-                                <td><img src="img/ComidaIcon.png">Comida</td>
-                                <td>S/103.00</td>
-                            </tr>
-
-                            <tr>
-                                <td>02</td>
-                                <td><img src="img/EntretenimientoIcon.png">Entretenimiento</td>
-                                <td>S/90.00</td>
-                            </tr>
-
-                            <tr>
-                                <td>03</td>
-                                <td><img src="img/TransporteIcon.png">Transporte</td>
-                                <td>S/70.00</td>
-                            </tr>
-
-                            <tr>
-                                <td>04</td>
-                                <td><img src="img/CasaIcon.png">Renta</td>
-                                <td>S/45.00</td>
-                            </tr>
-
-                            <tr>
-                                <td>05</td>
-                                <td><img src="img/ComprasIcon.png">Compras</td>
-                                <td>S/29.00</td>
-                            </tr>
-
-                        </tbody>
-
-
-
-
-            </table>
-            </div>  
-        </section>   
-
-        <section>
-            <h2>Distribucion de Gastos</h2>
-            <div class="diagrama-torta">
-            <canvas id="miGraficoPastel"></canvas>
-            </div>
-
-
         </section>
+
+        <section class="metas">
+            <h2>Metas de ahorro</h2>
+
+            <ul class="listaBarra">
+            <li>
+                <div class="fila">
+                <div class="Categoria">Auto</div>
+                <div class="monto">S/.80.40 de S/.130.00</div>
+                </div>
+                <div class="progreso">
+                <div class="relleno" style="width: 50%;"></div>
+                </div>
+            </li>
+
+            <li>
+                <div class="fila">
+                <div class="Categoria">Viaje a Cancun</div>
+                <div class="monto">S/.200.00 de S/.500.00</div>
+                </div>
+                <div class="progreso">
+                <div class="relleno" style="width: 40%;"></div>
+                </div>
+            </li>
+            </ul>
+            <div class="verMas">
+            <a href="#">Ver Mas</a>
+            </div>
+        </section>
+
+        </div>
     </div>
 
 

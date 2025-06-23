@@ -4,9 +4,6 @@
     --primario: #D9D9D9;
     --secundario: #27355F;
     --verde: #95A57C ;
-    --amarillo: #E3C65F;
-    --txtButton: #151D3A;
-    --buttonHover: #C4AC59;
 }
 
 html{
@@ -142,17 +139,11 @@ h2{
 
 .boton-guardar {
     padding: 0;
-    
-}
-
-
-main a {
-    padding: 0;
-    margin-right: 1rem;
+    border:none;
     position: relative;
 }
 
-.botones a::after {
+.boton-guardar::after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -163,11 +154,32 @@ main a {
     transition: width 0.3s ease;
 }
 
-.botones a:hover::after {
+.boton-guardar:hover::after {
     width: 100%;
 }
 
-.botones a {
+main a {
+    padding: 0;
+    margin-right: 1rem;
+    position: relative;
+}
+
+a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 0%;
+    background-color: var(--secundario);
+    transition: width 0.3s ease;
+}
+
+a:hover::after {
+    width: 100%;
+}
+
+a {
     font-family: poppins, sans-serif;
     font-size: 20px;
     color: var(--secundario);
@@ -211,20 +223,4 @@ input{
 
 #notificacion.mostrar {
     opacity: 1;
-}
-
-.boton-guardar{
-    padding: 0.7rem 1rem;
-    background-color: var(--amarillo);
-    border-radius: 5px;
-    color: var(--txtButton);
-    border: none;
-    font-family: poppins, sans-serif;
-    font-weight: 600;
-    text-decoration: none;
-}
-
-.boton-guardar:hover{
-
-    background-color: var(--buttonHover);
 }

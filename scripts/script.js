@@ -37,6 +37,9 @@ function mostrarNotificacion(event, mesage){
     }, 1200);
 }
 
+
+
+
 function activarBoton(elemento1,elemento2,elemento3,elemento4) {
     const boton1 = document.getElementById(elemento1);
     const boton2 = document.getElementById(elemento2);
@@ -82,26 +85,26 @@ function mostrarNotificacion2(event, mesage){
 }
 
 
-const ctx1 = document.getElementById('graficoIngresosGastos');
+const ctx = document.getElementById('graficoIngresosGastos');
 
 
 //Tabla Ingresos vs Gastos
-new Chart(ctx1, {
+new Chart(ctx, {
     type: 'bar',
     data: {
         labels: ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado','Domingo'],
         datasets: [{
             label: 'Ingresos',
             data: [70, 90, 40, 80, 65, 85, 110],
-            backgroundColor: 'rgba(75, 192, 192, 1)',
-            borderColor: '#27355F',
+            backgroundColor: 'rgba(75, 192, 192, 0.2)',
+            borderColor: 'white',
             borderWidth: 1,
 
         }, {
             label: 'Gastos',
             data: [60, 55, 110, 35, 55, 70, 60],
             backgroundColor: '#d4c44f',
-            borderColor: '#27355F',
+            borderColor: 'white',
             borderWidth: 1,
 
         }]
@@ -112,10 +115,9 @@ new Chart(ctx1, {
             legend: {
                 position: 'bottom',
                 labels: {
-                    color: '#27355F',
+                    color: 'white',
                     font: {
-                        size: 14,
-                        family: 'Poppins'
+                        size: 14
                     }
                 }
             },
@@ -126,15 +128,15 @@ new Chart(ctx1, {
         scales: {
             y: {
                 beginAtZero: true,
-                ticks: {color: '#27355F',font: { size: 14,family: 'Poppins'}},
+                ticks: {color: 'white',font: { size: 14,family: 'Poppins'}},
                 grid: {
-                    color: 'rgba(0, 0, 0, 0.2)'
+                    color: 'rgba(255, 255, 255, 0.2)'
                 }
             },
             x: {
-                ticks: { color: '#27355F',  font: {size: 14,family:'Poppins'}},
+                ticks: { color: 'white',  font: {size: 14,family:'Poppins'}},
                 grid: {
-                    color: 'rgba(0, 0, 0, 0.2)'
+                    color: 'rgba(255, 255, 255, 0.2)'
                 }
             }
         }
@@ -145,55 +147,24 @@ new Chart(ctx1, {
 });
 
 
-const ctx2 = document.getElementById('miGraficoPastel').getContext('2d');
+//Tabla Gastos del Mes
 
-const miGrafico = new Chart(ctx2, {
-  type: 'pie',
-  data: {
-    labels: ['Comida', 'Entretenimiento','Transporte','Renta','Compras','Otros'],
-    datasets: [{
-      label: 'Distribución de movimientos',
-      data: [103, 90, 70, 45, 29, 25], // VALORES REALES
-      backgroundColor: [
-        'rgba(39, 53, 95, 0.7)',
-        'rgba(49, 66, 125, 0.7)',
-        'rgba(60, 90, 160, 0.7)',
-        'rgba(100, 130, 190, 0.7)',
-        'rgba(140, 170, 210, 0.7)',
-        'rgba(180, 210, 235, 0.7)'
-      ],
-      borderColor: [
-        'rgba(39, 53, 95, 1)',
-        'rgba(49, 66, 125, 1)',
-        'rgba(60, 90, 160, 1)',
-        'rgba(100, 130, 190, 1)',
-        'rgba(140, 170, 210, 1)',
-        'rgba(180, 210, 235, 1)'
-      ],
-      borderWidth: 1
-    }]
-  },
-  options: {
-    responsive: true,
-    plugins: {
-      legend: {
-        position: 'bottom',
-        labels: {
-          font: {
-            family: 'Poppins'
-          },
-          color: '#27355F'
-        }
-      },
-      tooltip: {
-        callbacks: {
-          label: function(context) {
-            const label = context.label || '';
-            const value = context.raw;
-            return `${label}: S/${value}`;
-          }
-        }
-      }
-    }
-  }
-});
+const grid = document.getElementById('grid-dias');
+const totalDias = 196;
+const nivelesColor = [
+  '#ffffff',     
+  '#c4b885',     
+  '#b0a14d',     
+  '#88762c',     
+  '#5f521c'      
+];
+
+for(let i=0; i< totalDias; i++){
+    const dia = document.createElement('div');
+    dia.classList.add('dia');
+
+    const nivel = Math.floor(Math.random()*nivelesColor.length);
+    dia.style.backgroundColor = nivelesColor[nivel];
+
+    grid.appendChild(dia);
+}
