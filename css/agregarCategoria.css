@@ -4,7 +4,9 @@
     --primario: #D9D9D9;
     --secundario: #27355F;
     --verde: #95A57C;
-    --amarillo: #FFD600;
+    --amarillo: #E3C65F;
+    --txtButton: #151D3A;
+    --buttonHover: #C4AC59;
 }
 
 html {
