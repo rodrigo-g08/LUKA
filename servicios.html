@@ -2,15 +2,17 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>servicios - Luka</title>
+  <title>Servicios - Luka</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/comida.css">
 </head>
 <body>
+
+  <!-- Modal principal -->
   <div class="modal">
     <div class="modal-header">
       <h1>Servicios</h1>
-      <button class="close"onclick="returnCategorias()">&times;</button>
+      <button class="close">&times;</button>
     </div>
     <p class="subtitle">Este mes:</p>
     <div class="contenido">
@@ -22,11 +24,33 @@
           <li>[D] S/13.40 - 13/5</li>
           <li>[D] S/13.40 - 13/5</li>
         </ul>
-        <button class="btn-mas">Registra más gastos</button>
+        <!-- Este botón abrirá el segundo modal -->
+        <button class="btn-mas" id="abrirFormulario">Registra más gastos</button>
       </div>
       <p class="total">Total: S/50.50</p>
     </div>
   </div>
-  <script src="scripts/main.js"></script>
+
+  <!-- Segundo modal: Registro de gasto -->
+  <div id="formularioGasto">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Registrar Gasto</h2>
+        <button class="close" id="cerrarFormulario">&times;</button>
+      </div>
+      <div class="contenido">
+        <form id="gastoForm">
+          <label for="monto">Monto (S/):</label>
+          <input type="number" id="monto" step="0.01" required>
+
+          <label for="fecha">Fecha:</label>
+          <input type="date" id="fecha" required>
+
+          <button type="submit">Guardar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>
