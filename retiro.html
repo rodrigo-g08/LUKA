@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,9 +11,10 @@
     <link rel="stylesheet" href="css/retiro.css">
 </head>
 <body>
+
     <div class="nav-bg">
         <nav class="navegacion-principal">
-            <a href="miBalance.html"><img src="img/Logo.png" id="Logo"></a>
+            <a href="miBalance.html"> <img src="img/Logo.png" id="Logo"> </a>
             <a href="miBalance.html" class="opciones">Mi Balance</a>
             <a href="categorias.html" class="opciones">Categorias</a>
             <a href="resumenFinanciero.html" class="opciones">Resumen Financiero</a>
@@ -24,40 +25,63 @@
         </nav>
     </div>
 
-    <div class="container">
-        <div class="registro">
-            <h1 class="titulo">Registrar Retiro</h1>
+    <main class="main">
+    <header>
+    <h1 class="titulo">Mi Balance</h1>
+    </header>
+    <div class="registro-container">
+    <div class="registro">
+            <h2 class="titulo">Registrar Retiro</h2>
             <div class="botones">
-                <button type="button" id="boton1" class="activo" onclick="activarBoton('boton1','boton2','formulario1','formulario2')">Gasto</button>
-                <button type="button" id="boton2" onclick="activarBoton('boton2','boton1','formulario2','formulario1')">Ahorro</button>
+                <a href="#" id="boton1" onclick="activarBoton('boton1','boton2','formulario1','formulario2')" class="activo">Gasto</a>
+                <a href="#" id="boton2" onclick="activarBoton('boton2','boton1','formulario2','formulario1')">Ahorro</a>
             </div>
+            
             <form class="formularios">
-                <div id="formulario1" class="formulario activo">
-                    <div class="campo">
-                        <label for="categoriaGasto">Ingresa Categoria</label>
-                        <input type="text" id="categoriaGasto" name="categoriaGasto" placeholder="">
-                    </div>
-                    <div class="campo">
-                        <label for="montoGasto">Digite Monto</label>
-                        <input type="number" id="montoGasto" name="montoGasto" placeholder="">
-                    </div>
-                </div>
-                <div id="formulario2" class="formulario">
-                    <div class="campo">
-                        <label for="metaAhorro">Ingrese Meta de Ahorros</label>
-                        <input type="text" id="metaAhorro" name="metaAhorro" placeholder="">
-                    </div>
-                    <div class="campo">
-                        <label for="montoAhorro">Digite Monto</label>
-                        <input type="number" id="montoAhorro" name="montoAhorro" placeholder="">
-                    </div>
-                </div>
-                <button type="submit" class="boton-guardar" onclick="mostrarNotificacion(event, 'Retiro Agregado')">Guardar</button>
-            </form>
-        </div>
-    </div>
 
+                <div id="formulario1" class="formulario activo">
+                    
+                    <div>
+                        <label>Ingresa Categoria</label>
+
+                        <input type="text" placeholder="">
+                    </div>
+
+                    <div>
+                        <label>Digite Monto</label>
+
+                        <input type="number" placeholder="">
+                    </div>
+
+                </div>
+
+                <div id="formulario2" class="formulario">
+
+                    <div>
+                        <label>Ingrese Meta de Ahorros</label>
+                        
+                        <input type="text" placeholder="">
+                    </div>
+
+                    <div>
+                        <label>Digite Monto</label>
+                    
+                        <input type="number" placeholder="">
+                    </div>
+
+                </div>
+
+                <div class="boton-guardar-container">
+                    <a href="miBalance.html" class="boton-guardar" onclick="mostrarNotificacion(event, 'Retiro Agregado')";>Guardar</a>
+                </div>
+            </form>
+    </div>
+    </div>
+    </main>
+    
     <div id="notificacion" class="toast"></div>
+
     <script src="scripts/script.js"></script>
+
 </body>
 </html>
