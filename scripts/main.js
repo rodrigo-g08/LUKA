@@ -22,14 +22,6 @@ function returnCategorias(){
     window.location.href = "categorias.html";
 }
 
-function ingresarCuenta(){
-    window.location.href = "miBalance.html";
-}
-
-function registrarCuenta(){
-    window.location.href = "registro.html";
-}
-
 function registrar(){
     window.location.href = "login.html";
 }

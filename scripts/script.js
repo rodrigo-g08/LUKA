@@ -1,14 +1,27 @@
-function activarBoton(elemento1,elemento2,elemento3,elemento4, clase) {
-    const boton1 = document.getElementById(elemento1);
-    const boton2 = document.getElementById(elemento2);
-    const form1 = document.getElementById(elemento3);
-    const form2 = document.getElementById(elemento4);
+let elemento =null;
 
-    boton1.classList.add(clase);
-    form1.classList.add(clase);
-    boton2.classList.remove(clase);
-    form2.classList.remove(clase);
+function eliminarGasto(event){
+document.getElementById("modal").style.display = "block";
+elemento = event.currentTarget.closest("li");
+}
 
+function confirmarEliminacion(mesage){
+    const notification = document.getElementById("notificacion");
+    if(elemento){
+    elemento.remove();
+    elemento=null;
+    notification.textContent = mesage;
+    notification.classList.add("mostrar");
+    }
+
+    cerrarModal();
+    setTimeout(() => {
+        notification.classList.remove("mostrar");
+    }, 1200);
+}
+
+function cerrarModal(){
+ document.getElementById("modal").style.display = "none";
 }
 
 function mostrarNotificacion(event, mesage){
@@ -23,6 +36,54 @@ function mostrarNotificacion(event, mesage){
         window.location.href = "miBalance.html";
     }, 1200);
 }
+
+
+
+
+function activarBoton(elemento1,elemento2,elemento3,elemento4) {
+    const boton1 = document.getElementById(elemento1);
+    const boton2 = document.getElementById(elemento2);
+    const form1 = document.getElementById(elemento3);
+    const form2 = document.getElementById(elemento4);
+
+    boton1.classList.add('activo');
+    form1.classList.add('activo');
+    boton2.classList.remove('activo');
+    form2.classList.remove('activo');
+
+}
+
+function activarBoton2(elemento1,elemento2,elemento3,elemento4,elemento5,elemento6) {
+    const boton1 = document.getElementById(elemento1);
+    const boton2 = document.getElementById(elemento2);
+    const boton3 = document.getElementById(elemento3);
+    const form1 = document.getElementById(elemento4);
+    const form2 = document.getElementById(elemento5);
+    const form3 = document.getElementById(elemento6);
+
+    boton1.classList.add('activo');
+    form1.classList.add('activo');
+    boton2.classList.remove('activo');
+    form2.classList.remove('activo');
+    boton3.classList.remove('activo');
+    form3.classList.remove('activo');
+
+}
+
+
+function mostrarNotificacion2(event, mesage){
+    event.preventDefault();
+
+    const notification = document.getElementById("notificacion");
+    notification.textContent = mesage;
+    notification.classList.add("mostrar");
+
+    setTimeout(() => {
+        notification.classList.remove("mostrar");
+        window.location.href = "metas_de_ahorro.html";
+    }, 1200);
+}
+
 
 const ctx = document.getElementById('graficoIngresosGastos');
 

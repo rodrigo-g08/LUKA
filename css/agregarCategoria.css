@@ -70,6 +70,7 @@ body {
     height: 25px;
 
 }
+
 .main {
     padding-top: 2rem;
     flex: 1;
@@ -78,13 +79,13 @@ body {
     align-items: center;
 }
 
-.modal-ingreso {
-    background-color: var(--secundario);
+.modal-meta {
+    background-color: #F0F0F0;
     padding: 2rem;
     border-radius: 12px;
     width: 300px;
-    color: var(--blanco);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    color: var(--secundario);
+
     position: relative;
 }
 
@@ -100,7 +101,7 @@ body {
     background: none;
     border: none;
     font-size: 1.2rem;
-    color: var(--blanco);
+    color: var(--secundario);
     cursor: pointer;
 }
 
@@ -111,13 +112,14 @@ body {
 }
 
 .modal-body input {
-    width: 100%;
+    width: 96%;
     padding: 0.5rem;
-    margin-top: 0.3rem;
+    margin-top: 10px;
     border: none;
     border-radius: 6px;
     background-color: var(--primario);
     font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
 }
 
 .btn-guardar {
@@ -129,29 +131,34 @@ body {
     font-weight: bold;
     border-radius: 8px;
     cursor: pointer;
-    width: 100%;
+    width: 99%;
 }
 
-/* Overlays */
-.overlay {
+.mensaje-exito {
     position: fixed;
-    top: 0;
+    top: 80px;
     left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: none;
+    width: 100%;
+    background-color: #00c853;
+    color: white;
+    text-align: center;
+    padding: 15px 10px;
+    font-weight: bold;
+    font-size: 1.5rem;
+    z-index: 9999;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    z-index: 1000;
 }
 
-.mensaje {
-    background-color: #fff;
-    padding: 2rem 3rem;
-    border-radius: 10px;
-    font-size: 1.5rem;
-    font-weight: 600;
-    text-align: center;
-    color: #333;
+.mensaje-exito button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+.oculto {
+    display: none;
 }

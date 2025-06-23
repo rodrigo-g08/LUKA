@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Balance</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="css/stylesBalance.css" as="style">
+    <link rel="stylesheet" href="css/historialCompleto.css">
+</head>
+<body>
+
+    <div class="nav-bg">
+        <nav class="navegacion-principal">
+            <a href="miBalance.html"> <img src="img/Logo.png" id="Logo"> </a>
+            <a href="miBalance.html" class="opciones">Mi Balance</a>
+            <a href="categorias.html" class="opciones">Categorias</a>
+            <a href="resumenFinanciero.html" class="opciones">Resumen Financiero</a>
+            <a href="invitar_pareja.html" class="opciones">Invitar Pareja</a>
+            <a href="notificaciones.html"><img src="img/Notificacion.png" id="NotificacionesImg"></a>
+            <a href="#"><img src="img/Moneda.png" id="MonedaImg"></a>
+            <a href="login.html"><img src="img/salir.png" id="LogOutImg"></a>
+        </nav>
+    </div>
+
+    <main class="main">
+    <header>
+    <h1 class="titulo">Mi Balance</h1>
+    </header>
+
+    <div class="contenedor">
+        <section class="ultimoMovimiento">
+            <h2>Historial Completo</h2>
+            <a href="#" id="boton1" onclick="activarBoton2('boton1','boton2','boton3','formulario1','formulario2','formulario3')" class="activo opcion">Todo</aclas>
+            <a href="#" id="boton2" onclick="activarBoton2('boton2','boton1','boton3','formulario2','formulario1','formulario3')" class="opcion">Ingresos</a>
+            <a href="#" id="boton3" onclick="activarBoton2('boton3','boton2','boton1','formulario3','formulario2','formulario1')" class="opcion">Gastos</a>
+
+            <div id="formulario1" class="ultimoMovimiento-Box activo">
+            <ul class="listaUltimosMovimientos">
+                <li class="primer transaccion"><span class="etiqueta">[D]</span> Ingreso - 20/5 - S/1200.00 <a href="#" class="btn-borrar" onclick="eliminarGasto(event)"><img src="img/borrarIcon.png" class="borrar-img"></a></li>
+                <li class="transaccion"><span class="etiqueta">[D]</span> Retiro - 20/5 - S/100.00 - Categoría: Comida <a href="#" class="btn-borrar" onclick="eliminarGasto(event)"><img src="img/borrarIcon.png" class="borrar-img"></a></li>
+                <li class="transaccion"><span class="etiqueta">[D]</span> Ingreso - 19/5 - S/950.00 <a href="#" class="btn-borrar" onclick="eliminarGasto(event)"><img src="img/borrarIcon.png" class="borrar-img"></a></li>
+                <li class="transaccion"><span class="etiqueta">[D]</span> Retiro - 19/5 - S/150.00 - Ahorro: Emergencias <a href="#" class="btn-borrar" onclick="eliminarGasto(event)"><img src="img/borrarIcon.png" class="borrar-img"></a></li>
+                <li class="transaccion"><span class="etiqueta">[D]</span> Ingreso - 19/5 - S/150.00 <a href="#" class="btn-borrar" onclick="eliminarGasto(event)"><img src="img/borrarIcon.png" class="borrar-img"></a></li>
+                <li class="transaccion"><span class="etiqueta">[D]</span> Retiro - 18/5 - S/80.00 - Categoría: Transporte <a href="#" class="btn-borrar" onclick="eliminarGasto(event)"><img src="img/borrarIcon.png" class="borrar-img"></a></li>
+                <li class="transaccion"><span class="etiqueta">[D]</span> Ingreso - 18/5 - S/700.00 <a href="#" class="btn-borrar" onclick="eliminarGasto(event)"><img src="img/borrarIcon.png" class="borrar-img"></a></li>
+                <li class="transaccion"><span class="etiqueta">[D]</span> Retiro - 18/5 - S/120.00 - Categoría: Salud <a href="#" class="btn-borrar" onclick="eliminarGasto(event)"><img src="img/borrarIcon.png" class="borrar-img"></a></li>
+                <li class="transaccion"><span class="etiqueta">[D]</span> Ingreso - 17/5 - S/400.00 <a href="#" class="btn-borrar" onclick="eliminarGasto(event)"><img src="img/borrarIcon.png" class="borrar-img"></a></li>
+                <li class="transaccion"><span class="etiqueta">[D]</span> Retiro - 17/5 - S/300.00 - Ahorro: Auto <a href="#" class="btn-borrar" onclick="eliminarGasto(event)"><img src="img/borrarIcon.png" class="borrar-img"></a></li>
+                <li class="transaccion"><span class="etiqueta">[D]</span> Ingreso - 16/5 - S/1100.00 <a href="#" class="btn-borrar" onclick="eliminarGasto(event)"><img src="img/borrarIcon.png" class="borrar-img"></a></li>
+                <li class="transaccion"><span class="etiqueta">[D]</span> Retiro - 16/5 - S/75.00 - Categoría: Entretenimiento <a href="#" class="btn-borrar" onclick="eliminarGasto(event)"><img src="img/borrarIcon.png" class="borrar-img"></a></li>
+                <li class="transaccion"><span class="etiqueta">[D]</span> Ingreso - 16/5 - S/250.00 <a href="#" class="btn-borrar" onclick="eliminarGasto(event)"><img src="img/borrarIcon.png" class="borrar-img"></a></li>
+                <li class="transaccion"><span class="etiqueta">[D]</span> Retiro - 15/5 - S/16.50 - Categoría: Transporte <a href="#" class="btn-borrar" onclick="eliminarGasto(event)"><img src="img/borrarIcon.png" class="borrar-img"></a></li>
+                <li class="transaccion"><span class="etiqueta">[D]</span> Ingreso - 15/5 - S/1000.00 <a href="#" class="btn-borrar" onclick="eliminarGasto(event)"><img src="img/borrarIcon.png" class="borrar-img"></a></li>
+                <li class="transaccion"><span class="etiqueta">[D]</span> Retiro - 15/5 - S/36.90 - Categoría: Comida <a href="#" class="btn-borrar" onclick="eliminarGasto(event)"><img src="img/borrarIcon.png" class="borrar-img"></a></li>
+                <li class="transaccion"><span class="etiqueta">[D]</span> Ingreso - 13/5 - S/850.00 <a href="#" class="btn-borrar" onclick="eliminarGasto(event)"><img src="img/borrarIcon.png" class="borrar-img"></a></li>
+                <li class="transaccion"><span class="etiqueta">[D]</span> Retiro - 14/5 - S/120.40 - Categoría: Servicios <a href="#" class="btn-borrar" onclick="eliminarGasto(event)"><img src="img/borrarIcon.png" class="borrar-img"></a></li>
+                <li class="transaccion"><span class="etiqueta">[D]</span> Ingreso - 10/5 - S/600.00 <a href="#" class="btn-borrar" onclick="eliminarGasto(event)"><img src="img/borrarIcon.png" class="borrar-img"></a></li>
+                <li class="transaccion"><span class="etiqueta">[D]</span> Retiro - 13/5 - S/50.00 - Categoría: Educación <a href="#" class="btn-borrar" onclick="eliminarGasto(event)"><img src="img/borrarIcon.png" class="borrar-img"></a></li>
+            </ul>
+            </div>
+
+            <div id="formulario2" class="ultimoMovimiento-Box">
+            <ul class="listaUltimosMovimientos">
+                <li class="primer transaccion"><span class="etiqueta">[D]</span> Ingreso - 20/5 - S/1200.00 <a href="#" class="btn-borrar" onclick="eliminarGasto(event)"><img src="img/borrarIcon.png" class="borrar-img"></a></li>
+                <li class="transaccion"><span class="etiqueta">[D]</span> Ingreso - 19/5 - S/950.00 <a href="#" class="btn-borrar" onclick="eliminarGasto(event)"><img src="img/borrarIcon.png" class="borrar-img"></a></li>
+                <li class="transaccion"><span class="etiqueta">[D]</span> Ingreso - 19/5 - S/150.00 <a href="#" class="btn-borrar" onclick="eliminarGasto(event)"><img src="img/borrarIcon.png" class="borrar-img"></a></li>
+                <li class="transaccion"><span class="etiqueta">[D]</span> Ingreso - 18/5 - S/700.00 <a href="#" class="btn-borrar" onclick="eliminarGasto(event)"><img src="img/borrarIcon.png" class="borrar-img"></a></li>
+                <li class="transaccion"><span class="etiqueta">[D]</span> Ingreso - 17/5 - S/400.00 <a href="#" class="btn-borrar" onclick="eliminarGasto(event)"><img src="img/borrarIcon.png" class="borrar-img"></a></li>
+                <li class="transaccion"><span class="etiqueta">[D]</span> Ingreso - 16/5 - S/1100.00 <a href="#" class="btn-borrar" onclick="eliminarGasto(event)"><img src="img/borrarIcon.png" class="borrar-img"></a></li>
+                <li class="transaccion"><span class="etiqueta">[D]</span> Ingreso - 16/5 - S/250.00 <a href="#" class="btn-borrar" onclick="eliminarGasto(event)"><img src="img/borrarIcon.png" class="borrar-img"></a></li>
+                <li class="transaccion"><span class="etiqueta">[D]</span> Ingreso - 15/5 - S/1000.00 <a href="#" class="btn-borrar" onclick="eliminarGasto(event)"><img src="img/borrarIcon.png" class="borrar-img"></a></li>
+                <li class="transaccion"><span class="etiqueta">[D]</span> Ingreso - 14/5 - S/980.00 <a href="#" class="btn-borrar" onclick="eliminarGasto(event)"><img src="img/borrarIcon.png" class="borrar-img"></a></li>
+                <li class="transaccion"><span class="etiqueta">[D]</span> Ingreso - 14/5 - S/200.00 <a href="#" class="btn-borrar" onclick="eliminarGasto(event)"><img src="img/borrarIcon.png" class="borrar-img"></a></li>
+                <li class="transaccion"><span class="etiqueta">[D]</span> Ingreso - 13/5 - S/850.00 <a href="#" class="btn-borrar" onclick="eliminarGasto(event)"><img src="img/borrarIcon.png" class="borrar-img"></a></li>
+                <li class="transaccion"><span class="etiqueta">[D]</span> Ingreso - 13/5 - S/300.00 <a href="#" class="btn-borrar" onclick="eliminarGasto(event)"><img src="img/borrarIcon.png" class="borrar-img"></a></li>
+                <li class="transaccion"><span class="etiqueta">[D]</span> Ingreso - 12/5 - S/400.00 <a href="#" class="btn-borrar" onclick="eliminarGasto(event)"><img src="img/borrarIcon.png" class="borrar-img"></a></li>
+                <li class="transaccion"><span class="etiqueta">[D]</span> Ingreso - 12/5 - S/150.00 <a href="#" class="btn-borrar" onclick="eliminarGasto(event)"><img src="img/borrarIcon.png" class="borrar-img"></a></li>
+                <li class="transaccion"><span class="etiqueta">[D]</span> Ingreso - 11/5 - S/200.00 <a href="#" class="btn-borrar" onclick="eliminarGasto(event)"><img src="img/borrarIcon.png" class="borrar-img"></a></li>
+                <li class="transaccion"><span class="etiqueta">[D]</span> Ingreso - 11/5 - S/120.00 <a href="#" class="btn-borrar" onclick="eliminarGasto(event)"><img src="img/borrarIcon.png" class="borrar-img"></a></li>
+                <li class="transaccion"><span class="etiqueta">[D]</span> Ingreso - 10/5 - S/600.00 <a href="#" class="btn-borrar" onclick="eliminarGasto(event)"><img src="img/borrarIcon.png" class="borrar-img"></a></li>
+                <li class="transaccion"><span class="etiqueta">[D]</span> Ingreso - 09/5 - S/300.00 <a href="#" class="btn-borrar" onclick="eliminarGasto(event)"><img src="img/borrarIcon.png" class="borrar-img"></a></li>
+                <li class="transaccion"><span class="etiqueta">[D]</span> Ingreso - 09/5 - S/450.00 <a href="#" class="btn-borrar" onclick="eliminarGasto(event)"><img src="img/borrarIcon.png" class="borrar-img"></a></li>
+                <li class="transaccion"><span class="etiqueta">[D]</span> Ingreso - 08/5 - S/700.00 <a href="#" class="btn-borrar" onclick="eliminarGasto(event)"><img src="img/borrarIcon.png" class="borrar-img"></a></li>
+            </ul>
+            </div>
+
+            <div id="formulario3" class="ultimoMovimiento-Box">
+            <ul class="listaUltimosMovimientos">
+                <li class="primer transaccion"><span class="etiqueta">[D]</span> Retiro - 20/5 - S/100.00 - Categoría: Comida <a href="#" class="btn-borrar" onclick="eliminarGasto(event)"><img src="img/borrarIcon.png" class="borrar-img"></a></li>
+                <li class="transaccion"><span class="etiqueta">[D]</span> Retiro - 20/5 - S/50.00 - Ahorro: Viaje <a href="#" class="btn-borrar" onclick="eliminarGasto(event)"><img src="img/borrarIcon.png" class="borrar-img"></a></li>
+                <li class="transaccion"><span class="etiqueta">[D]</span> Retiro - 19/5 - S/150.00 - Ahorro: Emergencias <a href="#" class="btn-borrar" onclick="eliminarGasto(event)"><img src="img/borrarIcon.png" class="borrar-img"></a></li>
+                <li class="transaccion"><span class="etiqueta">[D]</span> Retiro - 19/5 - S/95.00 - Categoría: Comida <a href="#" class="btn-borrar" onclick="eliminarGasto(event)"><img src="img/borrarIcon.png" class="borrar-img"></a></li>
+                <li class="transaccion"><span class="etiqueta">[D]</span> Retiro - 18/5 - S/80.00 - Categoría: Transporte <a href="#" class="btn-borrar" onclick="eliminarGasto(event)"><img src="img/borrarIcon.png" class="borrar-img"></a></li>
+                <li class="transaccion"><span class="etiqueta">[D]</span> Retiro - 18/5 - S/120.00 - Categoría: Salud <a href="#" class="btn-borrar" onclick="eliminarGasto(event)"><img src="img/borrarIcon.png" class="borrar-img"></a></li>
+                <li class="transaccion"><span class="etiqueta">[D]</span> Retiro - 18/5 - S/200.00 - Ahorro: Viaje <a href="#" class="btn-borrar" onclick="eliminarGasto(event)"><img src="img/borrarIcon.png" class="borrar-img"></a></li>
+                <li class="transaccion"><span class="etiqueta">[D]</span> Retiro - 17/5 - S/300.00 - Ahorro: Auto <a href="#" class="btn-borrar" onclick="eliminarGasto(event)"><img src="img/borrarIcon.png" class="borrar-img"></a></li>
+                <li class="transaccion"><span class="etiqueta">[D]</span> Retiro - 17/5 - S/60.00 - Categoría: Entretenimiento <a href="#" class="btn-borrar" onclick="eliminarGasto(event)"><img src="img/borrarIcon.png" class="borrar-img"></a></li>
+                <li class="transaccion"><span class="etiqueta">[D]</span> Retiro - 16/5 - S/75.00 - Categoría: Entretenimiento <a href="#" class="btn-borrar" onclick="eliminarGasto(event)"><img src="img/borrarIcon.png" class="borrar-img"></a></li>
+                <li class="transaccion"><span class="etiqueta">[D]</span> Retiro - 15/5 - S/16.50 - Categoría: Transporte <a href="#" class="btn-borrar" onclick="eliminarGasto(event)"><img src="img/borrarIcon.png" class="borrar-img"></a></li>
+                <li class="transaccion"><span class="etiqueta">[D]</span> Retiro - 15/5 - S/36.90 - Categoría: Comida <a href="#" class="btn-borrar" onclick="eliminarGasto(event)"><img src="img/borrarIcon.png" class="borrar-img"></a></li>
+                <li class="transaccion"><span class="etiqueta">[D]</span> Retiro - 14/5 - S/120.40 - Categoría: Servicios <a href="#" class="btn-borrar" onclick="eliminarGasto(event)"><img src="img/borrarIcon.png" class="borrar-img"></a></li>
+                <li class="transaccion"><span class="etiqueta">[D]</span> Retiro - 13/5 - S/50.00 - Categoría: Educación <a href="#" class="btn-borrar" onclick="eliminarGasto(event)"><img src="img/borrarIcon.png" class="borrar-img"></a></li>
+                <li class="transaccion"><span class="etiqueta">[D]</span> Retiro - 13/5 - S/45.00 - Ahorro: Laptop <a href="#" class="btn-borrar" onclick="eliminarGasto(event)"><img src="img/borrarIcon.png" class="borrar-img"></a></li>
+                <li class="transaccion"><span class="etiqueta">[D]</span> Retiro - 12/5 - S/75.50 - Categoría: Salud <a href="#" class="btn-borrar" onclick="eliminarGasto(event)"><img src="img/borrarIcon.png" class="borrar-img"></a></li>
+                <li class="transaccion"><span class="etiqueta">[D]</span> Retiro - 12/5 - S/200.00 - Ahorro: Viaje <a href="#" class="btn-borrar" onclick="eliminarGasto(event)"><img src="img/borrarIcon.png" class="borrar-img"></a></li>
+                <li class="transaccion"><span class="etiqueta">[D]</span> Retiro - 11/5 - S/30.00 - Categoría: Comida <a href="#" class="btn-borrar" onclick="eliminarGasto(event)"><img src="img/borrarIcon.png" class="borrar-img"></a></li>
+                <li class="transaccion"><span class="etiqueta">[D]</span> Retiro - 10/5 - S/50.00 - Ahorro: Bicicleta <a href="#" class="btn-borrar" onclick="eliminarGasto(event)"><img src="img/borrarIcon.png" class="borrar-img"></a></li>
+                <li class="transaccion"><span class="etiqueta">[D]</span> Retiro - 09/5 - S/40.00 - Categoría: Servicios <a href="#" class="btn-borrar" onclick="eliminarGasto(event)"><img src="img/borrarIcon.png" class="borrar-img"></a></li>
+            </ul>
+            </div>
+
+        </section>
+
+        <section class="balance">
+            <h2>Balance Actual</h2>
+            <p class="balance-disponible">S/540.50</p>
+            <div><a href="ingreso.html" class="opciones">Ingreso</a></div>
+            <div><a href="retiro.html" class="opciones">Retiro</a></div>
+
+        </section>
+    </div>
+    </main>
+
+    
+    <div class="modal" id="modal">
+    <div class="modal-content">
+    <h2>¿Desea eliminar registro?</h2>
+    <a href="#" class="opcion" onclick="confirmarEliminacion('Registro Eliminado')">Confirmar</a>
+    <a href="#" class="opcion" onclick="cerrarModal()">Cancelar</a>
+    </div>
+    </div>
+
+    <div id="notificacion" class="toast"></div>
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>
