@@ -1,10 +1,12 @@
-/* Variables y base */
 :root {
-  --azul: #27355F;
-  --gris: #D9D9D9;
-  --amarillo: #E3C65F;
-  --blanco: #FFFFFF;
-  --negro: #000000;
+    --blanco: #ffffff;
+    --oscuro: #212121;
+    --primario: #D9D9D9;
+    --secundario: #27355F;
+    --verde: #95A57C;
+    --amarillo: #E3C65F;
+    --txtButton: #151D3A;
+    --buttonHover: #C4AC59;
 }
 
 * {
@@ -23,7 +25,7 @@ body {
 
 .left {
   width: 50%;
-  background-color: var(--azul);
+  background-color: var(--secundario);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -36,7 +38,7 @@ body {
 
 .right {
   width: 50%;
-  background-color: var(--gris);
+  background-color: #D9D9D9;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -51,16 +53,14 @@ body {
 }
 
 h1 {
+  color: var(--secundario);
   font-size: 4rem;
   margin-bottom: 0;
   font-weight: 700;
 }
 
-.punto {
-  color: var(--amarillo);
-}
-
 h2 {
+  color: var(--secundario);
   font-size: 2.2rem;
   margin: 10px 0 30px;
   font-weight: 700;
@@ -69,7 +69,7 @@ h2 {
 }
 
 .azul {
-  color: var(--azul);
+  color: var(--secundario);
 }
 
 form {
@@ -80,6 +80,7 @@ form {
 }
 
 label {
+  color: var(--secundario);
   text-align: left;
   font-size: 1rem;
   font-weight: 600;
@@ -95,7 +96,7 @@ input {
 }
 
 button {
-  padding: 12px;
+  padding: 10px;
   border: none;
   border-radius: 10px;
   font-size: 1.1rem;
@@ -108,14 +109,18 @@ button {
 
 .btn-recuperar {
   background-color: var(--amarillo);
-  color: var(--negro);
+  color: var(--txtButton);
   margin-bottom: 10px;
+}
+
+.btn-recuperar:hover {
+    background-color: var(--buttonHover);
 }
 
 .link-final {
   margin-top: 10px;
   font-size: 1rem;
-  color: var(--negro);
+  color: var(--oscuro);
   text-align: left;
   width: 100%;
 }
@@ -123,12 +128,12 @@ button {
 .link-final .resaltado {
   font-weight: 700;
   text-decoration: none;
-  color: var(--negro);
+  color: var(--oscuro);
 }
 
 .descripcion {
   font-size: 1.1rem;
-  color: var(--negro);
+  color: var(--secundario);
   margin-bottom: 18px;
   text-align: left;
   width: 100%;

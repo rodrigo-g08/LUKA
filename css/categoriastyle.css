@@ -1,9 +1,12 @@
-:root{
+:root {
     --blanco: #ffffff;
     --oscuro: #212121;
     --primario: #D9D9D9;
     --secundario: #27355F;
-    --verde: #95A57C ;
+    --verde: #95A57C;
+    --amarillo: #E3C65F;
+    --txtButton: #151D3A;
+    --buttonHover: #C4AC59;
 }
 
 html{
