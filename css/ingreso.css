@@ -4,6 +4,9 @@
     --primario: #D9D9D9;
     --secundario: #27355F;
     --verde: #95A57C ;
+    --amarillo: #E3C65F;
+    --txtButton: #151D3A;
+    --buttonHover: #C4AC59;
 }
 
 html{
@@ -108,16 +111,6 @@ h2{
     text-decoration: none;
 }
 
-.botones .activo::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 3px;
-    width: 100%;
-    background-color: var(--secundario);
-    transition: width 0.3s ease;
-}
 
 .formularios {
     width: 400px;
@@ -132,31 +125,13 @@ h2{
 .formulario.activo{
     display: block;
 }
+
 .boton-guardar-container{
     margin-top: 3rem;
     text-align: right;
 }
 
-.boton-guardar {
-    padding: 0;
-    border:none;
-    position: relative;
-}
 
-.boton-guardar::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 3px;
-    width: 0%;
-    background-color: var(--secundario);
-    transition: width 0.3s ease;
-}
-
-.boton-guardar:hover::after {
-    width: 100%;
-}
 
 main a {
     padding: 0;
@@ -164,29 +139,6 @@ main a {
     position: relative;
 }
 
-a::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 3px;
-    width: 0%;
-    background-color: var(--secundario);
-    transition: width 0.3s ease;
-}
-
-a:hover::after {
-    width: 100%;
-}
-
-a {
-    font-family: poppins, sans-serif;
-    font-size: 20px;
-    color: var(--secundario);
-    font-weight: 600;
-    text-decoration: none;
-    position: relative;
-}
 
 .formularios label {
     margin-top: 1.2rem;
@@ -223,4 +175,20 @@ input{
 
 #notificacion.mostrar {
     opacity: 1;
+}
+
+.boton-guardar{
+    padding: 0.7rem 1rem;
+    background-color: var(--amarillo);
+    border-radius: 5px;
+    color: var(--txtButton);
+    border: none;
+    font-family: poppins, sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.boton-guardar:hover{
+
+    background-color: var(--buttonHover);
 }

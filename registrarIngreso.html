@@ -7,69 +7,40 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/ingreso.css">
+    <link rel="stylesheet" href="css/registrarIngreso.css">
 </head>
 <body>
-    <!-- Header -->
-   <div class="nav-bg">
+    <div class="nav-bg">
         <nav class="navegacion-principal">
-            <a href="miBalance.html"> <img src="img/Logo.png" id="Logo"> </a>
+            <a href="miBalance.html"><img src="img/Logo.png" id="Logo"></a>
             <a href="miBalance.html" class="opciones">Mi Balance</a>
             <a href="categorias.html" class="opciones">Categorias</a>
             <a href="resumenFinanciero.html" class="opciones">Resumen Financiero</a>
             <a href="invitar_pareja.html" class="opciones">Invitar Pareja</a>
             <a href="notificaciones.html"><img src="img/Notificacion.png" id="NotificacionesImg"></a>
-            <a href="#"><img src="img/Moneda.png" id="MonedaImg"></a>
+            <a href="cambioMoneda.html"><img src="img/Moneda.png" id="MonedaImg"></a>
             <a href="login.html"><img src="img/salir.png" id="LogOutImg"></a>
         </nav>
     </div>
 
-    <main class="main">
-    <header>
-    <h1 class="titulo">Metas de Ahorro</h1>
-    </header>
-    <div class="registro-container">
-    <div class="registro">
-            <h2 class="titulo">Registrar ingreso</h2>
-            
+    <div class="container">
+        <div class="registro">
+            <h1 class="titulo">Registrar ingreso</h1>
             <form class="formularios">
-
-                <div id="formulario1" class="formulario activo">
-                    <div>
-                        <label>Digite Monto</label>
-
-                        <input type="number" placeholder="">
-                    </div>
-
+                <div class="campo">
+                    <label for="monto1">Digite Monto</label>
+                    <input type="number" id="monto1" name="monto1" placeholder="">
                 </div>
-
-                <div id="formulario2" class="formulario">
-
-                    <div>
-                        <label>Ingrese Meta de Ahorros</label>
-                        
-                        <input type="text" placeholder="">
-                    </div>
-
-                    <div>
-                        <label>Digite Monto</label>
-                    
-                        <input type="number" placeholder="">
-                    </div>
-
+                <div class="campo">
+                    <label for="meta">Ingrese Meta de Ahorros</label>
+                    <input type="text" id="meta" name="meta" placeholder="">
                 </div>
-
-                <div class="boton-guardar-container">
-                    <a href="metas_de_ahorro.html" class="boton-guardar" onclick="mostrarNotificacion2(event, 'Ingreso Agregado')";>Guardar</a>
-                </div>
+                <button type="submit" class="boton-guardar" onclick="mostrarNotificacion2(event, 'Ingreso Agregado')">Guardar</button>
             </form>
+        </div>
     </div>
-    </div>
-    </main>
-    
+
     <div id="notificacion" class="toast"></div>
-
     <script src="scripts/script.js"></script>
-
 </body>
 </html>
