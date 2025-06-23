@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="css/ingreso.css">
 </head>
 <body>
-    <div class="nav-bg">
+    <!-- Header -->
+   <div class="nav-bg">
         <nav class="navegacion-principal">
             <a href="miBalance.html"> <img src="img/Logo.png" id="Logo"> </a>
             <a href="miBalance.html" class="opciones">Mi Balance</a>
@@ -22,23 +23,53 @@
             <a href="login.html"><img src="img/salir.png" id="LogOutImg"></a>
         </nav>
     </div>
-    <div class="container">
-        <div class="ingreso-moneda">
-            <h1>Registrar ingreso</h1>
-            <form action="#" method="post">
-                <div class="campo">
-                    <label for="monto">Digite Monto</label>
-                    <input type="number" id="monto" name="monto" placeholder="">
+
+    <main class="main">
+    <header>
+    <h1 class="titulo">Mi Balance</h1>
+    </header>
+    <div class="registro-container">
+    <div class="registro">
+            <h2 class="titulo">Registrar ingreso</h2>
+            
+            <form class="formularios">
+
+                <div id="formulario1" class="formulario activo">
+                    <div>
+                        <label>Digite Monto</label>
+
+                        <input type="number" placeholder="">
+                    </div>
+
                 </div>
-                <div class="campo">
-                    <label for="meta">Ingrese Meta de Ahorros</label>
-                    <input type="text" id="meta" name="meta" placeholder="">
+
+                <div id="formulario2" class="formulario">
+
+                    <div>
+                        <label>Ingrese Meta de Ahorros</label>
+                        
+                        <input type="text" placeholder="">
+                    </div>
+
+                    <div>
+                        <label>Digite Monto</label>
+                    
+                        <input type="number" placeholder="">
+                    </div>
+
                 </div>
-                <button type="button" class="boton-guardar" onclick="mostrarNotificacion(event, 'Ingreso agregado')">Guardar</button>
+
+                <div class="boton-guardar-container">
+                    <a href="MiBalance.html" class="boton-guardar" onclick="mostrarNotificacion(event, 'Ingreso Agregado')";>Guardar</a>
+                </div>
             </form>
-        </div>
     </div>
+    </div>
+    </main>
+    
     <div id="notificacion" class="toast"></div>
+
     <script src="scripts/script.js"></script>
+
 </body>
 </html>
