@@ -113,13 +113,11 @@ td img {
 
 .lista-Ranking{
     border-radius: 8px;
-    background-color: var(--secundario);
-    padding: 2rem;
-    width: 400px;
-    margin: 0 auto;
-    color:#ffffff;
-    height: auto;
-    height: 250px;
+    background-color: none;
+    width: 700px;
+    margin-bottom: 2rem;
+    color: var(--secundario);
+    height: 280px;
 }
 
 .tabla-gastos{
@@ -130,20 +128,20 @@ td img {
 
 .tabla-gastos th, .tabla-gastos td {
     padding: 1rem;
-    border-bottom: 2px solid #ffffff;
+    border-bottom: 2px solid var(--secundario);
 }
 
 .tabla-gastos th {
-    color: white;
+    color: var(--secundario);
     font-weight: 600;
 }
 
 .tabla-vs{
-    background-color: #27355F;
-    width: 500px;
-    padding: 2rem;
+    background-color: none;
+    width: 1050px;
+    padding: 2rem 6rem 3rem 0rem;
     border-radius: 8px;
-    max-height: 250px;
+    max-height: 600px;
 }
 
 .calendario {
@@ -195,14 +193,6 @@ td img {
     margin-right:2rem;
 }
 
-.listaBarra{
-    list-style-type: none;
-    padding: 0 1rem;
-    font-size: 20px;
-    font-weight: 600;
-    color: var(--secundario);
-    width: 550px;
-}
 
 .progreso{
     background-color: var(--secundario);
@@ -249,5 +239,12 @@ a{
 
 .barras a:hover::after{
     width: 100%;
+}
+
+#miGraficoPastel {
+width:"300";
+height:"300";
+margin-bottom: 2rem;
+margin-top: 0;
 }
 

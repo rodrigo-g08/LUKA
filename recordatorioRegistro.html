@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Recordatorio de Registro</title>
+    <link rel="stylesheet" href="css/recordatorioRegistro.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+    <div class="nav-bg">
+        <nav class="navegacion-principal">
+            <a href="miBalance.html"><img src="img/Logo.png" id="Logo" /></a>
+            <a href="miBalance.html" class="opciones">Mi Balance</a>
+            <a href="categorias.html" class="opciones">Categorias</a>
+            <a href="resumenFinanciero.html" class="opciones">Resumen Financiero</a>
+            <a href="invitar_pareja.html" class="opciones">Invitar Pareja</a>
+            <a href="notificaciones.html"><img src="img/Notificacion.png" id="NotificacionesImg" /></a>
+            <a href="#"><img src="img/Moneda.png" id="MonedaImg" /></a>
+            <a href="login.html"><img src="img/salir.png" id="LogOutImg" /></a>
+        </nav>
+    </div>
+
+    <div id="mensaje" class="mensaje"></div>
+
+    <main class="main">
+
+    <div class="registro">
+        <h1 class="titulo">Recordatorio de Registro</h1>
+        <form id="formRecordatorio">
+            <label for="titulo">Ingrese nombre del recordatorio</label>
+            <input type="text" id="titulo" placeholder="Ej: Registrar gastos diarios" />
+
+            <label for="hora">Seleccionar hora</label>
+            <input type="time" id="hora" />
+
+            <button type="submit" class="boton">Guardar</button>
+        </form>
+    </div>
+    </main>
+
+
+    <script src="scripts/recordatorioRegistro.js"></script>
+</body>
+</html>
