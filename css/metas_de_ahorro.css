@@ -4,6 +4,9 @@
     --primario: #D9D9D9;
     --secundario: #27355F;
     --verde: #95A57C ;
+    --amarillo: #E3C65F;
+    --txtButton: #151D3A;
+    --buttonHover: #C4AC59;
 }
 
 html{
@@ -283,25 +286,14 @@ h2{
 }
 
 .bottonAgregar a{
+    padding: 0.7rem 1rem;
+    background-color: var(--amarillo);
     position: relative;
-    color: var(--blanco);
+    color: var(--secundario);
+    border-radius: 5px;
     text-decoration: none;
-    font-size: 20px;
-    font-weight: 500;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 1rem;
 
-}
-
-.bottonAgregar a::after{
-    position: absolute;
-    content: "";
-    bottom: 0px;
-    left: 0px;
-    background-color: var(--blanco);
-    height: 3px;
-    transition: width 0.3s ease;
-    width: 0;
-}
-
-.bottonAgregar a:hover::after{
-    width: 100%;
 }

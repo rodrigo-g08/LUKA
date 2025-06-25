@@ -158,3 +158,32 @@ input:invalid:focus ~ .error {
     display: block;
     color: red;
 }
+
+.mensaje-exito {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background-color: #00c853; /* Verde */
+    color: white;
+    text-align: center;
+    padding: 15px 10px;
+    font-weight: bold;
+    font-size: 1.5rem;
+    z-index: 9999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mensaje-exito button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+.oculto {
+    display: none;
+}
