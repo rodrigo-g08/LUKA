@@ -81,6 +81,20 @@ function mostrarNotificacion2(event, mesage){
     }, 1200);
 }
 
+function mostrarNotificacion3(event, mesage){
+    event.preventDefault();
+
+    const notification = document.getElementById("notificacion");
+    notification.textContent = mesage;
+    notification.classList.add("mostrar");
+
+    setTimeout(() => {
+        notification.classList.remove("mostrar");
+        window.location.href = "categorias.html";
+    }, 1200);
+}
+
+
 
 const ctx1 = document.getElementById('graficoIngresosGastos');
 

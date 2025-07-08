@@ -7,11 +7,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/agregarCategoria.css">
+    <link rel="stylesheet" href="css/seleccionaCategoria.css">
 </head>
 <body>
     <!-- Header -->
-   <div class="nav-bg">
+    <div class="nav-bg">
         <nav class="navegacion-principal">
             <a href="miBalance.html"> <img src="img/Logo.png" id="Logo"> </a>
             <a href="miBalance.html" class="opciones">Mi Balance</a>
@@ -26,50 +26,34 @@
 
     <main class="main">
     <header>
-    <h1 class="titulo">Categorias</h1>
+    <h1 id="titulo-categoria">Categorias / </h1>
     </header>
     <div class="registro-container">
     <div class="registro">
-            <h2 class="titulo">Agregar Categoria</h2>
+            <h2 class="titulo">Este mes:</h2>
+            <div class="contenido">
+            <div class="registros">
+            <h2>Registros</h2>
+            <div class="registros-box">
+                <ul id="ultimos-registros">
+
+                </ul>    
+            </div>
+            </div>
             
-            <form class="formularios">
-
-                <div id="formulario1" class="formulario activo">
-                    <div>
-                        <label>Ingrese nombre de categoria</label>
-
-                        <input type="text" placeholder="">
-                    </div>
-
-                </div>
-
-                <div id="formulario2" class="formulario">
-
-                    <div>
-                        <label>Ingrese Meta de Ahorros</label>
-                        
-                        <input type="text" placeholder="">
-                    </div>
-
-                    <div>
-                        <label>Digite Monto</label>
-                    
-                        <input type="number" placeholder="">
-                    </div>
-
-                </div>
-
-                <div class="boton-guardar-container">
-                    <a href="MiBalance.html" class="boton-guardar" onclick="mostrarNotificacion3(event, 'Categoria Agregada')";>Guardar</a>
-                </div>
-            </form>
+            <div class="total">
+            <h2>Total</h2>
+            <div class="total-box">
+            <p id="total-registro"></p>
+            </div>
+            
+            </div>
+            </div>
     </div>
     </div>
     </main>
     
-    <div id="notificacion" class="toast"></div>
-
-    <script src="scripts/script.js"></script>
+    <script src="scripts/categorias.js"></script>
 
 </body>
 </html>

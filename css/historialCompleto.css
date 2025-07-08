@@ -1,9 +1,12 @@
-:root{
+:root {
     --blanco: #ffffff;
     --oscuro: #212121;
     --primario: #D9D9D9;
     --secundario: #27355F;
-    --verde: #95A57C ;
+    --verde: #95A57C;
+    --amarillo: #E3C65F;
+    --txtButton: #151D3A;
+    --buttonHover: #C4AC59;
 }
 
 html{
@@ -118,7 +121,7 @@ a{
 
 .balance{
 
-    flex: 0 0 200px;
+    flex: 0 0 260px;
 
     color: var(--secundario);
 }
@@ -323,4 +326,41 @@ a.opcion:hover::after{
 
 #notificacion.mostrar {
     opacity: 1;
+}
+
+.balance-botones {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+}
+
+.balance-botones .boton-balance:first-child {
+    margin-left: 0;
+}
+
+.balance-botones .boton-balance:last-child {
+    margin-right: 0;
+}
+
+.boton-balance {
+    background-color: var(--amarillo);
+    color: var(--txtButton);
+    font-size: 1.6rem;
+    padding: 0.5rem 2rem;
+    margin-top: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    text-align: center;
+    flex: 1 1 0;
+    justify-content: center;
+}
+
+.boton-balance:hover {
+    background-color: #C4AC59;
 }

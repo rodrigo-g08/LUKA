@@ -111,34 +111,29 @@ h1{
     margin: 0 auto; 
 }
 
-/* Page Header */
 .agregarMeta {
-    text-align :right;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.agregarMeta a{
-    position: relative;
-    color: var(--secundario);
-    text-decoration: none;
-    font-size: 20px;
-    font-weight: 500;
-}
-
-.agregarMeta a::after{
-    position: absolute;
-    content: "";
-    bottom: 0px;
-    left: 0px;
-    background-color: var(--secundario);
-    height: 3px;
-    transition: width 0.3s ease;
-    width: 0;
-}
-
-.agregarMeta a:hover::after{
+    display: flex;
+    justify-content: flex-end; /* Alinea el botón a la derecha */
     width: 100%;
+}
+
+.agregarMeta button {
+    background-color: var(--amarillo);
+    color: var(--txtButton);
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 0.5rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-family: poppins, sans-serif;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.agregarMeta button:hover {
+    background-color: var(--buttonHover);
 }
 
 
@@ -289,7 +284,7 @@ h2{
     padding: 0.7rem 1rem;
     background-color: var(--amarillo);
     position: relative;
-    color: var(--secundario);
+    color: var(--txtButton);
     border-radius: 5px;
     text-decoration: none;
     font-size: 16px;
