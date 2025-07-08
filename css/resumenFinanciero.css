@@ -18,6 +18,7 @@ body{
     min-height: 100vh;
     font-family: poppins, sans-serif;
     background-color: #F0F0F0;
+    width: 100vw;
 }
 
 .nav-bg{
