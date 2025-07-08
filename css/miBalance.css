@@ -135,26 +135,29 @@ a {
     margin: 1rem 0;
 }
 
-.balance a {
+.balance a, .barras a,.ultimoMovimiento a{
+
     display: inline-block;
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 600;
     position: relative;
+    background-color: var(--amarillo);
+    border-radius: 9px;
+    color: var(--txtButton);
+    border: none;
+    font-family: poppins, sans-serif;
+    text-decoration: none;
+    padding: 0.2rem 1rem;
+   
+}
+ 
+.balance a:hover, .barras a:hover,.ultimoMovimiento a:hover{
+    background-color: var(--buttonHover);
 }
 
-.balance a::after {
-    position: absolute;
-    content: "";
-    bottom: 0;
-    left: 0;
-    height: 3px;
-    width: 0;
-    background-color: var(--secundario);
-    transition: width 0.3s ease;
-}
-
-.balance a:hover::after {
-    width: 100%;
+.boton-balance{
+    margin: 0.5rem 1rem;
+    width: 7.5rem;
 }
 
 .balance-disponible {
@@ -209,25 +212,6 @@ a {
     font-weight: 500;
 }
 
-.ultimoMovimiento a {
-    position: relative;
-}
-
-.ultimoMovimiento a::after {
-    position: absolute;
-    content: "";
-    bottom: 0;
-    left: 0;
-    background-color: var(--secundario);
-    height: 3px;
-    transition: width 0.3s ease;
-    width: 0;
-}
-
-.ultimoMovimiento a:hover::after {
-    width: 100%;
-}
-
 .listaBarra {
     list-style-type: none;
     padding: 0 1rem;
@@ -249,28 +233,6 @@ a {
     border-radius: 8px;
 }
 
-.boton-balance {
-    background-color: var(--amarillo);
-    color: var(--txtButton);
-    font-size: 1.6rem;
-    padding: 0.5rem 2rem;
-    margin-top: 1rem;
-    border: none;
-    border-radius: 0.5rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    text-align: center;
-    flex: 1 1 0;
-    justify-content: center;
-}
-
-.boton-balance:hover {
-    background-color: #C4AC59;
-}
 
 .fila {
     display: flex;
@@ -326,26 +288,6 @@ a {
     overflow: hidden;
 }
 
-.barras a {
-    position: relative;
-    display: flex;
-    align-items: center;
-}
-
-.barras a::after {
-    position: absolute;
-    content: "";
-    bottom: 0;
-    left: 0;
-    background-color: var(--secundario);
-    height: 3px;
-    transition: width 0.3s ease;
-    width: 0;
-}
-
-.barras a:hover::after {
-    width: 100%;
-}
 
 .barras {
     margin-top: 3rem;

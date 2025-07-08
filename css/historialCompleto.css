@@ -14,7 +14,7 @@ html{
 }
 
 body{
-    font-size: 16px;
+
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -130,28 +130,29 @@ a{
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
-
+/*#4aed3de8
+#4c72c1e8
+*/
 .balance a{
     display: inline-block;
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 600;
     position: relative;
     margin: 0.5rem 1rem;
+    background-color: var(--amarillo);
+    border-radius: 9px;
+    color: var(--txtButton);
+    border: none;
+    font-family: poppins, sans-serif;
+    text-decoration: none;
+    padding: 0.2rem 1rem;
+    width: 7.5rem;
 }
 
-.balance a::after{
-    position: absolute;
-    content:"";
-    bottom: 0px;
-    left: 0px;
-    height: 3px;
-    width: 0;
-    background-color: var(--secundario);
-    transition: width 0.3s ease;
-}
 
-.balance a:hover::after{
-    width: 100%;
+.balance a:hover{
+
+    background-color: var(--buttonHover);
 }
 
 .balance-disponible{
@@ -262,18 +263,31 @@ a.opcion:hover::after{
   align-items: center;
 }
 
+
+
 .transaccion a{
     display: flex;
   align-items: center;
 }
 
 .btn-borrar {
+
+  margin-right: 1.3rem;
+  cursor: pointer;
+}
+
+.btn-editar {
   margin-left: auto;
   margin-right: 1.3rem;
   cursor: pointer;
 }
 
 .borrar-img {
+    width: 21px;
+    height: 21px;
+}
+
+.editar-img {
     width: 21px;
     height: 21px;
 }
@@ -328,39 +342,24 @@ a.opcion:hover::after{
     opacity: 1;
 }
 
-.balance-botones {
-    display: flex;
-    gap: 1rem;
-    width: 100%;
-}
-
-.balance-botones .boton-balance:first-child {
-    margin-left: 0;
-}
-
-.balance-botones .boton-balance:last-child {
-    margin-right: 0;
-}
-
-.boton-balance {
-    background-color: var(--amarillo);
-    color: var(--txtButton);
-    font-size: 1.6rem;
-    padding: 0.5rem 2rem;
-    margin-top: 1rem;
-    border: none;
-    border-radius: 0.5rem;
+.modal-content label {
+    font-size: 16px;
     font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    text-align: center;
-    flex: 1 1 0;
-    justify-content: center;
+    color: var(--secundario);
+    display: inline-block;
+    width: 6rem;
+    
 }
 
-.boton-balance:hover {
-    background-color: #C4AC59;
+#fecha-edit, #monto-edit{
+    padding: 0.7rem;
+    border-radius: 8px; 
+    border-width: 1px;
+    font-family: poppins, sans-serif;
+
 }
+
+#fecha-edit{
+    margin-top: 1rem;
+}
+

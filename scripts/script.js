@@ -1,7 +1,13 @@
 let elemento =null;
+let liActual = null;
 
 function eliminarGasto(event){
 document.getElementById("modal").style.display = "block";
+elemento = event.currentTarget.closest("li");
+}
+
+function editarGasto(event){
+document.getElementById("modal-editar").style.display = "block";
 elemento = event.currentTarget.closest("li");
 }
 
@@ -94,7 +100,53 @@ function mostrarNotificacion3(event, mesage){
     }, 1200);
 }
 
+function abrirEditor(event, btn) {
+  event.preventDefault(); // evita que el <a href="#"> recargue la página
+  liActual = btn.closest('li'); // busca el <li> más cercano a ese botón (es el que contiene el texto a editar)
 
+  // Extrae texto de la transacción
+  const texto = liActual.textContent;
+
+  // Busca monto (ej: S/100.50)
+  const montoMatch = texto.match(/S\/(\d+(\.\d+)?)/);
+
+  // Busca fecha (ej: 20/5)
+  const fechaMatch = texto.match(/(\d{1,2}\/\d{1,2})/);
+
+  // Si encontró monto y fecha, los coloca en los inputs del modal
+  if (montoMatch && fechaMatch) {
+    document.getElementById('monto-edit').value = parseFloat(montoMatch[1]);
+    document.getElementById('fecha-edit').value = fechaMatch[1];
+  }
+
+  // Muestra el modal
+  document.getElementById('modal-editar').style.display = 'block';
+}
+
+function cerrarEditor() {
+  document.getElementById('modal-editar').style.display = 'none';
+}
+
+function guardarEdicion() {
+  const nuevoMonto = parseFloat(document.getElementById('monto-edit').value).toFixed(2);
+  const nuevaFecha = document.getElementById('fecha-edit').value;
+
+  if (liActual) {
+    let texto = liActual.innerHTML;
+
+    // Reemplaza el monto anterior por el nuevo
+    texto = texto.replace(/S\/\d+(\.\d+)?/, `S/${nuevoMonto}`);
+
+    // Reemplaza la fecha anterior por la nueva
+    texto = texto.replace(/\d{1,2}\/\d{1,2}/, nuevaFecha);
+
+    // Actualiza el contenido del li
+    liActual.innerHTML = texto;
+
+  }
+
+  cerrarEditor(); // oculta el modal
+}
 
 const ctx1 = document.getElementById('graficoIngresosGastos');
 

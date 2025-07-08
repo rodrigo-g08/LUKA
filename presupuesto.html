@@ -3,16 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Presupuesto</title>
+    <title>Luka | Ingreso</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="preload" href="css/retiroStyle.css" as="style">
-    <link rel="stylesheet" href="css/presupuesto.css">
+    <link rel="stylesheet" href="css/ingreso.css">
 </head>
 <body>
-
-    <div class="nav-bg">
+    <!-- Header -->
+   <div class="nav-bg">
         <nav class="navegacion-principal">
             <a href="miBalance.html"> <img src="img/Logo.png" id="Logo"> </a>
             <a href="miBalance.html" class="opciones">Mi Balance</a>
@@ -25,24 +24,41 @@
         </nav>
     </div>
 
-    <div class="container">
-        <div class="presupuesto-box">
-            <h1>Agregar Presupuesto</h1>
+    <main class="main">
+    <header>
+    <h1 class="titulo">Mi Balance</h1>
+    </header>
+    <div class="registro-container">
+    <div class="registro">
+            <h2 class="titulo">Agregar Presupuesto</h2>
+            
             <form class="formularios">
-                <div class="campo">
-                    <label for="categoria">Ingresa Categoria de Presupuesto</label>
-                    <input type="text" id="categoria" name="categoria" placeholder="">
-                </div>
-                <div class="campo">
-                    <label for="monto">Digite Monto Límite</label>
-                    <input type="number" id="monto" name="monto" placeholder="">
-                </div>
-                <button type="submit" class="boton-guardar" onclick="mostrarNotificacion(event, 'Presupuesto Agregado')">Guardar</button>
-            </form>
-        </div>
-    </div>
 
+                <div id="formulario1" class="formulario activo">
+                   <div>
+                        <label>Ingrese categoria de Presupuesto</label>
+
+                        <input type="text" placeholder="">
+                    </div>
+                    <div>
+                        <label>Digite Monto Limite</label>
+
+                        <input type="number" placeholder="">
+                    </div>
+
+                </div>
+
+                <div class="boton-guardar-container">
+                    <a href="MiBalance.html" class="boton-guardar" onclick="mostrarNotificacion(event, 'Ingreso Agregado')";>Guardar</a>
+                </div>
+            </form>
+    </div>
+    </div>
+    </main>
+    
     <div id="notificacion" class="toast"></div>
+
     <script src="scripts/script.js"></script>
+
 </body>
 </html>
