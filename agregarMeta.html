@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Añadir Meta de Ahorro</title>
+    <title>Luka | Ingreso</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/agregarMetastyle.css">
+    <link rel="stylesheet" href="css/ingreso.css">
 </head>
 <body>
-    <div class="nav-bg">
+    <!-- Header -->
+   <div class="nav-bg">
         <nav class="navegacion-principal">
             <a href="miBalance.html"> <img src="img/Logo.png" id="Logo"> </a>
             <a href="miBalance.html" class="opciones">Mi Balance</a>
@@ -24,32 +25,40 @@
     </div>
 
     <main class="main">
-        <div class="modal-meta">
-            <div class="modal-header">
-                <h2>Agregar Meta de Ahorro</h2>
-                <button class="cerrar" onclick="window.location.href='metas_de_ahorro.html'">✕</button>
-            </div>
-            <div class="modal-body">
-                <label>Ingrese nombre de la meta</label>
-                <input type="text" id="nombreMeta" placeholder="Ej: Comprar bicicleta">
+    <header>
+    <h1 class="titulo">Mi Balance</h1>
+    </header>
+    <div class="registro-container">
+    <div class="registro">
+            <h2 class="titulo">Agregar Meta de Ahorro</h2>
+            
+            <form class="formularios">
 
-                <label>Digite monto</label>
-                <input type="number" id="montoMeta" placeholder="Ej: 1500">
+                <div id="formulario1" class="formulario activo">
+                   <div>
+                        <label>Ingrese nombre de la meta</label>
 
-                <label>Seleccionar fecha</label>
-                <input type="date" id="fechaMeta">
+                        <input type="text" id="nombreMeta" placeholder="">
+                    </div>
+                    <div>
+                        <label>Digite Monto</label>
 
-                
-                <button class="btn-guardar" onclick="guardarMeta()">Guardar</button>
-            </div>
-        </div>
-    </main>
+                        <input type="number" id="montoMeta" placeholder="">
+                    </div>
 
-    <div id="mensajeConfirmacion" class="mensaje-exito oculto">
-        Meta creada con éxito!
-        <button onclick="cerrarMensaje()">✕</button>
+                </div>
+
+                <div class="boton-guardar-container">
+                    <a href="#" class="boton-guardar" onclick="mostrarNotificacionyValidar(event, 'Meta Agregado')";>Guardar</a>
+                </div>
+            </form>
     </div>
+    </div>
+    </main>
+    
+    <div id="notificacion" class="toast"></div>
 
     <script src="scripts/agregarMeta.js"></script>
+
 </body>
 </html>

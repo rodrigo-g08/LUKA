@@ -100,6 +100,19 @@ function mostrarNotificacion3(event, mesage){
     }, 1200);
 }
 
+function mostrarNotificacion4(event, mesage){
+    event.preventDefault();
+
+    const notification = document.getElementById("notificacion");
+    notification.textContent = mesage;
+    notification.classList.add("mostrar");
+
+    setTimeout(() => {
+        notification.classList.remove("mostrar");
+        window.location.href = "metas_de_ahorro.html";
+    }, 1200);
+}
+
 function abrirEditor(event, btn) {
   event.preventDefault(); // evita que el <a href="#"> recargue la página
   liActual = btn.closest('li'); // busca el <li> más cercano a ese botón (es el que contiene el texto a editar)

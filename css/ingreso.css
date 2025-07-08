@@ -177,6 +177,10 @@ input{
     opacity: 1;
 }
 
+#notificacion.mostrar.error {
+  background-color: #e74c3c; /* rojo */
+}
+
 .boton-guardar{
     padding: 0.7rem 1rem;
     background-color: var(--amarillo);
