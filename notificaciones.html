@@ -35,5 +35,21 @@
             </div>
         </div>
     </main>
+
+    <script>
+    window.addEventListener("DOMContentLoaded", () => {
+        const params = new URLSearchParams(window.location.search);
+        if (params.get("exito") === "1") {
+        const mensaje = document.createElement("div");
+        mensaje.className = "mensaje-guardado";
+        mensaje.textContent = "✅ ¡Pago guardado exitosamente!";
+        document.body.insertBefore(mensaje, document.body.firstChild);
+
+        setTimeout(() => {
+            mensaje.remove();
+        }, 3000);
+        }
+    });
+    </script>
 </body>
 </html>
