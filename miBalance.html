@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head> 
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Balance</title>
@@ -26,16 +26,17 @@
     </div>
 
     <main class="main">
-
+    <header>
+    <h1 class="titulo">Mi Balance</h1>
+    </header>
 
     <div class="contenedor">
         <section class="balance">
-            <h1>Mi Balance</h1>
             <h2>Balance Actual</h2>
             <p class="balance-disponible">S/540.50</p>
-            <div class="balance-botones">
-                <button onclick="window.location.href='ingreso.html'" class="boton-balance">Ingreso +</button>
-                <button onclick="window.location.href='retiro.html'" class="boton-balance">Retiro -</button>
+            <div>
+                <a href="ingreso.html" class="boton-balance">Ingreso +</a>
+                <a href="retiro.html" class="boton-balance">Retiro -</a>
             </div>
 
         </section>
@@ -51,9 +52,9 @@
             <li><span class="etiqueta">[D]</span> Retiro - 14/5 - S/120.40 - Categoría: Servicios</li>
             </ul>
             </div>
-            <button onclick="window.location.href='historialCompleto.html'" class="boton-vermas historial">
-                Historial Movimientos
-            </button>
+            <nav class="historialMovimientos">
+            <a href="historialCompleto.html">Historial Movimientos</a>
+            </nav>
         </section>
     </div>
 
@@ -61,18 +62,16 @@
         <section class="presupuesto">
         
             <div class="agregarPresupuesto">
-
             <h2>Presupuesto</h2>
             <div>
             <a href="presupuesto.html" class="barras-botton">Agregar Presupuesto</a>
             </div>
-
             </div>
             <ul class="listaBarra">
             <li>
                 <div class="fila">
                 <div class="Categoria">
-                <span>Servicios   </span><span><img src="img/Servicios.png" id="ServiciosImg"></span>
+                <span class="presupuesto">Servicios:</span><span><img src="img/Servicios.png" id="ServiciosImg"></span>
                 </div>
                 <div class="monto">S/.80.40 de S/.130.00</div>
                 </div>
@@ -84,7 +83,7 @@
             <li>
                 <div class="fila">
                 <div class="Categoria">
-                <span>Transporte   </span><span><img src="img/Transporte.png" id="TransporteImg"></span>
+                <span class="presupuesto">Transporte:</span><span><img src="img/Transporte.png" id="TransporteImg"></span>
                 </div>
                 <div class="monto">S/.55.30 de S/.300.00</div>
                 </div>
@@ -104,7 +103,6 @@
             <div>
             <a href="metas_de_ahorro.html" class="barras-botton">Ver Mas</a>
             </div>
-
             </div>
             <ul class="listaBarra">
                 <li>
@@ -118,6 +116,7 @@
                         <div class="relleno" style="width: 33%;"></div>
                     </div>
                 </li>
+
                 <li>
                     <div class="fila">
                         <div class="Categoria">
@@ -130,8 +129,13 @@
                     </div>
                 </li>
             </ul>
+
+
         </section>
     </div>
     </main>
+
+
+    
 </body>
 </html>
