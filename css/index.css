@@ -130,7 +130,7 @@ body {
 
 .grid-servicios {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 3rem;
   justify-items: center;
 }
@@ -140,7 +140,10 @@ body {
   padding: 3rem;
   border-radius: 10px;
   text-align: center;
-  width: 85%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .item-servicio img {
@@ -151,7 +154,11 @@ body {
 .item-servicio span {
   font-size: 2rem;
   font-weight: 600;
+  display: block;
+  text-align: center;
 }
+
+
 
 .sobre-nosotros {
   display: flex;
