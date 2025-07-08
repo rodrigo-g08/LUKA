@@ -153,3 +153,105 @@ button {
     max-width: 90vw;
   }
 }
+
+
+/*NAVBAR*/
+:root {
+  --blanco: #ffffff;
+  --oscuro: #212121;
+  --primario: #D9D9D9;
+  --secundario: #27355F;
+  --verde: #95A57C;
+  --amarillo: #E3C65F;
+  --txtButton: #151D3A;
+  --buttonHover: #C4AC59;
+}
+
+.nav-bg {
+  background-color: var(--secundario);
+  width: 100%;
+}
+
+.navegacion-principal {
+  max-width: 120rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.8rem 4rem;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.nav-enlaces {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+
+.navegacion-principal a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+
+.navegacion-principal .opciones {
+  color: var(--blanco);
+  position: relative;
+}
+
+.navegacion-principal .opciones::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 0;
+  background-color: var(--blanco);
+  bottom: -4px;
+  left: 0;
+  transition: width 0.3s ease;
+}
+
+.navegacion-principal .opciones:hover::after {
+  width: 100%;
+}
+
+.boton-sesion {
+  background-color: var(--amarillo);
+  color: var(--txtButton);
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.boton-sesion:hover {
+  background-color: var(--buttonHover);
+}
+
+#Logo {
+  width: 132px;
+  height: auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navegacion-principal {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.5rem;
+  }
+
+  .nav-enlaces {
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+  }
+
+  .boton-sesion {
+    align-self: flex-start;
+  }
+}
