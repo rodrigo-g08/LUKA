@@ -1,9 +1,9 @@
-:root{
+:root {
     --blanco: #ffffff;
     --oscuro: #212121;
     --primario: #D9D9D9;
     --secundario: #27355F;
-    --verde: #95A57C ;
+    --verde: #95A57C;
     --amarillo: #E3C65F;
     --txtButton: #151D3A;
     --buttonHover: #C4AC59;
@@ -121,7 +121,7 @@ a{
 
 .balance{
 
-    flex: 0 0 200px;
+    flex: 0 0 260px;
 
     color: var(--secundario);
 }
@@ -342,8 +342,6 @@ a.opcion:hover::after{
     opacity: 1;
 }
 
-
-
 .modal-content label {
     font-size: 16px;
     font-weight: 600;
@@ -364,3 +362,4 @@ a.opcion:hover::after{
 #fecha-edit{
     margin-top: 1rem;
 }
+
