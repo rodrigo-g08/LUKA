@@ -99,7 +99,7 @@ label {
     font-weight: 600;
     margin-bottom: 0.5rem;
     display: block;
-    color: var(--oscuro);
+    color: var(--secundario);
 }
 
 input {

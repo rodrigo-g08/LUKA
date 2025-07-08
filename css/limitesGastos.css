@@ -95,7 +95,10 @@ body {
 
 .form-limite label {
   font-weight: 600;
-  color: var(--secundario);
+    font-size: 1.6rem;  /* Ajusta al estándar de las otras secciones */
+    margin-bottom: 0.8rem;
+    display: block;
+    color: var(--secundario);
 }
 
 .form-limite input {
