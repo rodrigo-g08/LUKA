@@ -8,15 +8,15 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
-// Configuración de Mailtrap
 const transport = nodemailer.createTransport({
   host: "sandbox.smtp.mailtrap.io",
   port: 2525,
   auth: {
-    user: "54395466cdf9ef", // ← tu usuario de Mailtrap
-    pass: "tu_contraseña_aquí" // ← tu contraseña de Mailtrap
+    user: "54395466cdf9ef",
+    pass: "4faf7f05f60680"
   }
 });
+
 
 app.post('/enviar-invitacion', async (req, res) => {
   const { email } = req.body;
@@ -33,10 +33,11 @@ app.post('/enviar-invitacion', async (req, res) => {
     await transport.sendMail(mailOptions);
     res.status(200).json({ success: true, message: 'Correo enviado con éxito' });
   } catch (error) {
-    console.error(error);
+    console.error("❌ Error al enviar correo:", error); // 👈 AÑADE ESTO
     res.status(500).json({ success: false, message: 'Error al enviar el correo' });
   }
 });
+
 
 app.listen(3001, () => {
   console.log('Servidor corriendo en http://localhost:3001');
