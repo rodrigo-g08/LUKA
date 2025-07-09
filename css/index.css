@@ -9,62 +9,78 @@
   --buttonHover: #C4AC59;
 }
 
-
-body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: #f0f2f5;
-  color: #1c1c1c;
+html{
+    font-size: 62.5%;
 }
 
-.navbar {
-  background: #002c5f;
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.8rem 4rem;
-  flex-wrap: wrap;
+body{
+    font-size: 16px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: poppins, sans-serif;
+    background-color: #F0F0F0;
 }
 
-.navbar img {
-  height: 58px;
+
+.nav-bg{
+    background-color: var(--secundario);
 }
 
-.navbar {
-  background: var(--secundario);
-  color: var(--blanco);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.8rem 4rem;
-  flex-wrap: wrap;
-}
-.navbar nav a {
-  text-decoration: none;
-  color: var(--blanco);
-  font-weight: 700;
-  font-size: 1.6rem;
+.navegacion-principal {   
+    width: 120rem;
+    margin: 0 auto; 
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
 }
 
-.navbar nav {
-  display: flex;
-  gap: 3rem; /* antes estaba en 4rem, puedes ajustar a gusto */
-  flex: 1;
-  justify-content: center;
-  align-items: center;
+.navegacion-principal a {
+    display: flex;
+    align-items: center; 
+    color: var(--blanco);
+    font-size: 2rem;
+    text-decoration: none;
+    font-weight: 500;
+    
+}
+
+.navegacion-principal .opciones{
+    position: relative;
+}
+
+.navegacion-principal .opciones::after{
+    background-color: #F0F0F0;
+    position: absolute;
+    height: 6px; 
+    bottom: 0px;
+    content:"";
+    width: 0;
+    transition: width 0.3s ease;
+}
+
+.navegacion-principal .opciones:hover::after{
+    width: 100%;
+}
+
+
+#Logo {
+    width: 132px;
+    height: 38px;
 }
 
 .boton-sesion,
 .boton-empezar {
   background: var(--amarillo);
   color: var(--txtButton);
+  font-size: 2rem;
   border: none;
+  font-weight: 500;
   padding: 1rem 2rem;
   border-radius: 6px;
   font-weight: bold;
   cursor: pointer;
-  font-size: 1.15rem;
   transition: background-color 0.3s ease;
 }
 .boton-sesion:hover,
@@ -107,7 +123,6 @@ body {
   border-radius: 6px;
   cursor: pointer;
   font-weight: bold;
-  font-size: 1.3rem;
   color: #1c1c1c;
 }
 

@@ -164,7 +164,8 @@ function guardarEdicion() {
 const ctx1 = document.getElementById('graficoIngresosGastos');
 
 
-//Tabla Ingresos vs Gastos
+// Tabla Ingresos vs Gastos
+// Tabla Ingresos vs Gastos
 new Chart(ctx1, {
     type: 'bar',
     data: {
@@ -172,17 +173,15 @@ new Chart(ctx1, {
         datasets: [{
             label: 'Ingresos',
             data: [70, 90, 40, 80, 65, 85, 110],
-            backgroundColor: 'rgba(75, 192, 192, 1)',
-            borderColor: '#27355F',
+            backgroundColor: 'rgba(173, 216, 230, 1)', // azul pastel
+            borderColor: '#87CEEB',
             borderWidth: 1,
-
         }, {
             label: 'Gastos',
             data: [60, 55, 110, 35, 55, 70, 60],
-            backgroundColor: '#d4c44f',
-            borderColor: '#27355F',
+            backgroundColor: 'rgba(255, 204, 153, 1)', // naranja pastel
+            borderColor: '#FFB347',
             borderWidth: 1,
-
         }]
     },
     options: {
@@ -205,21 +204,24 @@ new Chart(ctx1, {
         scales: {
             y: {
                 beginAtZero: true,
-                ticks: {color: '#27355F',font: { size: 14,family: 'Poppins'}},
+                ticks: {
+                    color: '#27355F',
+                    font: { size: 14, family: 'Poppins' }
+                },
                 grid: {
                     color: 'rgba(0, 0, 0, 0.2)'
                 }
             },
             x: {
-                ticks: { color: '#27355F',  font: {size: 14,family:'Poppins'}},
+                ticks: {
+                    color: '#27355F',
+                    font: { size: 14, family: 'Poppins' }
+                },
                 grid: {
                     color: 'rgba(0, 0, 0, 0.2)'
                 }
             }
         }
-
-
-
     }
 });
 
@@ -234,21 +236,21 @@ const miGrafico = new Chart(ctx2, {
       label: 'Distribución de movimientos',
       data: [103, 90, 70, 45, 29, 25], // VALORES REALES
       backgroundColor: [
-        'rgba(39, 53, 95, 0.7)',
-        'rgba(49, 66, 125, 0.7)',
-        'rgba(60, 90, 160, 0.7)',
-        'rgba(100, 130, 190, 0.7)',
-        'rgba(140, 170, 210, 0.7)',
-        'rgba(180, 210, 235, 0.7)'
-      ],
-      borderColor: [
-        'rgba(39, 53, 95, 1)',
-        'rgba(49, 66, 125, 1)',
-        'rgba(60, 90, 160, 1)',
-        'rgba(100, 130, 190, 1)',
-        'rgba(140, 170, 210, 1)',
-        'rgba(180, 210, 235, 1)'
-      ],
+      'rgba(255, 223, 128, 1)',  // amarillo pastel
+      'rgba(144, 238, 144, 1)',  // verde pastel
+      'rgba(255, 160, 160, 1)',  // rojo pastel
+      'rgba(173, 216, 230, 1)',  // celeste pastel
+      'rgba(255, 204, 153, 1)',  // naranja pastel
+      'rgba(255, 245, 157, 1)'   // amarillo claro pastel
+    ],
+      borderColor:[
+      'rgba(255, 204, 77, 1)',   // borde amarillo pastel más oscuro
+      'rgba(102, 205, 102, 1)',  // borde verde pastel más oscuro
+      'rgba(255, 102, 102, 1)',  // borde rojo pastel más oscuro
+      'rgba(100, 180, 200, 1)',  // borde celeste pastel más oscuro
+      'rgba(255, 153, 102, 1)',  // borde naranja pastel más oscuro
+      'rgba(255, 235, 100, 1)'   // borde amarillo claro pastel más oscuro
+    ],
       borderWidth: 1
     }]
   },
