@@ -9,11 +9,12 @@ async function verificarCorreo(event) {
 
     if (emailRegex.test(email)) {
         try {
-            const response = await fetch("http://localhost:3001/enviar-invitacion", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ email })
+            const response = await fetch("https://luka-9r4r.onrender.com/enviar-invitacion", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ email })
             });
+
 
             const data = await response.json();
 
