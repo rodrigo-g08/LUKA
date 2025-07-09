@@ -12,11 +12,10 @@ const transport = nodemailer.createTransport({
   host: "sandbox.smtp.mailtrap.io",
   port: 2525,
   auth: {
-    user: "54395466cdf9ef",
-    pass: "4faf7f05f60680"
+    user: process.env.MAIL_USER,
+    pass: process.env.MAIL_PASS
   }
 });
-
 
 app.post('/enviar-invitacion', async (req, res) => {
   const { email } = req.body;
@@ -33,12 +32,12 @@ app.post('/enviar-invitacion', async (req, res) => {
     await transport.sendMail(mailOptions);
     res.status(200).json({ success: true, message: 'Correo enviado con éxito' });
   } catch (error) {
-    console.error("❌ Error al enviar correo:", error); // 👈 AÑADE ESTO
+    console.error("❌ Error al enviar correo:", error);
     res.status(500).json({ success: false, message: 'Error al enviar el correo' });
   }
 });
 
-
-app.listen(3001, () => {
-  console.log('Servidor corriendo en http://localhost:3001');
+const PORT = process.env.PORT || 3001;
+app.listen(PORT, () => {
+  console.log(`Servidor corriendo en el puerto ${PORT}`);
 });
