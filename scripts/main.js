@@ -3,12 +3,63 @@ function guardarYRedirigir() {
 }
 
 function guardarYRedirigirPagos() {
-    window.location.href = "miBalance.html";
+  const nombre = document.getElementById("nombreServicio").value.trim();
+  const frecuencia = document.getElementById("frecuencia").value;
+  const monto = document.getElementById("monto").value.trim();
+  const mensaje = document.getElementById("mensajeError");
+
+  if (!nombre || !frecuencia || !monto || parseFloat(monto) <= 0) {
+    mensaje.style.display = "block";
+    mensaje.classList.remove("fade"); // reiniciar si se vuelve a mostrar
+
+    setTimeout(() => {
+      mensaje.style.display = "none";
+    }, 3000);
+
+    return;
+  }
+
+  mensaje.style.display = "none";
+  window.location.href = "notificaciones.html?exito=1";
 }
 
-function guardarYRedirigirLimite() {
-    window.location.href = "miBalance.html";
+document.addEventListener("DOMContentLoaded", () => {
+  const btnGuardar = document.getElementById("btnGuardarLimite");
+
+  btnGuardar.addEventListener("click", () => {
+    const categoria = document.getElementById("categoriaLimite").value.trim();
+    const monto = document.getElementById("montoLimite").value.trim();
+    const mensaje = document.getElementById("mensajeError");
+
+    if (!categoria || !monto || parseFloat(monto) <= 0) {
+      mensaje.style.display = "block";
+      mensaje.classList.remove("fade");
+
+      setTimeout(() => {
+        mensaje.style.display = "none";
+      }, 3000);
+      return;
+    }
+
+    mensaje.style.display = "none";
+    window.location.href = "notificaciones.html?exito=1";
+  });
+});
+
+function cerrarModal() {
+  window.location.href = "notificaciones.html";
 }
+
+
+function cerrarModal() {
+  window.location.href = "notificaciones.html";
+}
+
+
+function cerrarModal() {
+  window.location.href = "notificaciones.html";
+}
+
 
 function guardarMeta() {
     window.location.href = "metas_de_ahorro.html";
@@ -35,3 +86,7 @@ function toggleHora() {
     const inputHora = document.getElementById("hora");
     inputHora.disabled = !checkbox.checked;
 }
+function cerrarModal() {
+  window.location.href = "notificaciones.html";
+}
+

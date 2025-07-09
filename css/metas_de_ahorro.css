@@ -117,22 +117,22 @@ h1{
     width: 100%;
 }
 
-.agregarMeta button {
+.agregarMeta a {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 600;
+    position: relative;
     background-color: var(--amarillo);
+    border-radius: 9px;
     color: var(--txtButton);
     border: none;
-    padding: 0.7rem 1.5rem;
-    border-radius: 0.5rem;
-    font-size: 1.6rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.2s;
     font-family: poppins, sans-serif;
-    margin-top: 1rem;
+    text-decoration: none;
+    padding: 0.2rem 1rem;
     margin-bottom: 1rem;
 }
 
-.agregarMeta button:hover {
+.agregarMeta a:hover {
     background-color: var(--buttonHover);
 }
 
@@ -261,18 +261,6 @@ h2{
     font-size: 16px;
 }
 
-.delete-btn {
-    background: none;
-    border: none;
-    color: #ef4444;
-    cursor: pointer;
-    padding: 0.25rem;
-    border-radius: 0.25rem;
-    transition: background-color 0.2s;
-    font-size: 1rem;
-    font-family: poppins, sans-serif;
-}
-
 .bottonAgregar{
     text-align :right;
     margin-top: 2rem;
@@ -281,14 +269,21 @@ h2{
 }
 
 .bottonAgregar a{
-    padding: 0.7rem 1rem;
-    background-color: var(--amarillo);
-    position: relative;
-    color: var(--txtButton);
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 16px;
+    display: inline-block;
+    font-size: 18px;
     font-weight: 600;
-    margin-top: 1rem;
+    position: relative;
+    background-color: var(--amarillo);
+    border-radius: 9px;
+    color: var(--txtButton);
+    border: none;
+    font-family: poppins, sans-serif;
+    text-decoration: none;
+    padding: 0.2rem 1rem;
 
+}
+
+.bottonAgregar a:hover{
+
+    background-color: var(--buttonHover);
 }

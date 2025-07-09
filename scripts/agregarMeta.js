@@ -1,21 +1,43 @@
-function guardarMeta() {
+function validar() {
     const nombre = document.getElementById("nombreMeta").value.trim();
     const monto = document.getElementById("montoMeta").value.trim();
-    const fecha = document.getElementById("fechaMeta").value.trim();
-    const mensaje = document.getElementById("mensajeConfirmacion");
 
-    if (nombre === "" || monto === "" || fecha === "") {
-        mensaje.innerText = "Por favor completa todos los campos.";
-        mensaje.style.backgroundColor = "#e53935";
-        mensaje.classList.remove("oculto");
-        return;
+    if (nombre === "" || monto === "") {
+        return false;
     }
 
-    mensaje.innerText = "Meta creada con éxito!";
-    mensaje.style.backgroundColor = "#00c853";
-    mensaje.classList.remove("oculto");
+    return true;
+
+}
+
+function mostrarNotificacionyValidar(event, mesage){
+    event.preventDefault();
+
+    var isValid = validar();
+    const notification = document.getElementById("notificacion");
+    
+    if(isValid){
+    notification.textContent = mesage;
+    
+    notification.classList.add("mostrar");
 
     setTimeout(() => {
+        notification.classList.remove("mostrar");
         window.location.href = "metas_de_ahorro.html";
-    }, 2000);
+    }, 1200);
+
+    }
+    else{
+    notification.textContent = "Por favor completa todos los campos.";
+    notification.classList.add("mostrar","error");
+
+    setTimeout(() => {
+        notification.classList.remove("mostrar","error");
+        return;
+    }, 1200);
+
+    }
+    
+
 }
+

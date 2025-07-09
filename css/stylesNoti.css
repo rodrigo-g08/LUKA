@@ -106,3 +106,24 @@ main {
 .boton:hover {
     background-color: #e6c200;
 }
+
+.mensaje-guardado {
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  padding: 1rem 2rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  animation: slideDown 0.3s ease-out forwards;
+  z-index: 9999;
+  position: relative;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}

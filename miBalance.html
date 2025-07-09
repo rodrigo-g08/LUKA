@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head> 
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Balance</title>
@@ -26,16 +26,17 @@
     </div>
 
     <main class="main">
-
+    <header>
+    <h1 class="titulo">Mi Balance</h1>
+    </header>
 
     <div class="contenedor">
         <section class="balance">
-            <h1>Mi Balance</h1>
             <h2>Balance Actual</h2>
             <p class="balance-disponible">S/540.50</p>
-            <div class="balance-botones">
-                <button onclick="window.location.href='ingreso.html'" class="boton-balance">Ingreso +</button>
-                <button onclick="window.location.href='retiro.html'" class="boton-balance">Retiro -</button>
+            <div>
+                <a href="ingreso.html" class="boton-balance">Ingreso +</a>
+                <a href="retiro.html" class="boton-balance">Retiro -</a>
             </div>
 
         </section>
@@ -51,9 +52,9 @@
             <li><span class="etiqueta">[D]</span> Retiro - 14/5 - S/120.40 - Categoría: Servicios</li>
             </ul>
             </div>
-            <button onclick="window.location.href='historialCompleto.html'" class="boton-vermas historial">
-                Historial Movimientos
-            </button>
+            <nav class="historialMovimientos">
+            <a href="historialCompleto.html">Historial Movimientos</a>
+            </nav>
         </section>
     </div>
 
@@ -61,18 +62,16 @@
         <section class="presupuesto">
         
             <div class="agregarPresupuesto">
-                <h2>Presupuesto</h2>
-                <div>
-                    <button onclick="window.location.href='presupuesto.html'" class="boton-vermas">
-                        Agregar Presupuesto <img id="NextIcon" src="img/nextIcon.png">
-                    </button>
-                </div>
+            <h2>Presupuesto</h2>
+            <div>
+            <a href="presupuesto.html" class="barras-botton">Agregar Presupuesto</a>
+            </div>
             </div>
             <ul class="listaBarra">
             <li>
                 <div class="fila">
                 <div class="Categoria">
-                <span>Servicios   </span><span><img src="img/Servicios.png" id="ServiciosImg"></span>
+                <span class="presupuesto">Servicios:</span><span><img src="img/Servicios.png" id="ServiciosImg"></span>
                 </div>
                 <div class="monto">S/.80.40 de S/.130.00</div>
                 </div>
@@ -84,7 +83,7 @@
             <li>
                 <div class="fila">
                 <div class="Categoria">
-                <span>Transporte   </span><span><img src="img/Transporte.png" id="TransporteImg"></span>
+                <span class="presupuesto">Transporte:</span><span><img src="img/Transporte.png" id="TransporteImg"></span>
                 </div>
                 <div class="monto">S/.55.30 de S/.300.00</div>
                 </div>
@@ -99,22 +98,17 @@
         </section>
 
         <section class="metas">
-            <div class="agregarPresupuesto">
-                <h2>Metas de ahorro</h2>
-                <div>
-                    <button onclick="window.location.href='metas_de_ahorro.html'" class="boton-vermas">
-                        Ver Más <img id="NextIcon" src="img/nextIcon.png">
-                    </button>
-                </div>
+            <div class="verMas">
+            <h2>Metas de ahorro</h2>
+            <div>
+            <a href="metas_de_ahorro.html" class="barras-botton">Ver Mas</a>
+            </div>
             </div>
             <ul class="listaBarra">
                 <li>
                     <div class="fila">
                         <div class="Categoria">
                             <span>Auto</span>
-                            <svg class="iconoMeta" viewBox="0 0 24 24" fill="#27355F" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M5 11L6.5 6H17.5L19 11H5ZM17 17C16.45 17 16 16.55 16 16C16 15.45 16.45 15 17 15C17.55 15 18 15.45 18 16C18 16.55 17.55 17 17 17ZM7 17C6.45 17 6 16.55 6 16C6 15.45 6.45 15 7 15C7.55 15 8 15.45 8 16C8 16.55 7.55 17 7 17ZM4 12V14H5V17C5 18.1 5.9 19 7 19C8.1 19 9 18.1 9 17H15C15 18.1 15.9 19 17 19C18.1 19 19 18.1 19 17V14H20V12H4Z"/>
-                            </svg>
                         </div>
                         <div class="monto">S/.600.40 de S/.1830.00</div>
                     </div>
@@ -122,13 +116,11 @@
                         <div class="relleno" style="width: 33%;"></div>
                     </div>
                 </li>
+
                 <li>
                     <div class="fila">
                         <div class="Categoria">
                             <span>Viaje Cancún</span>
-                            <svg class="iconoMeta" viewBox="0 0 24 24" fill="#27355F" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M21 16V14L13 10V3.5C13 2.67 12.33 2 11.5 2C10.67 2 10 2.67 10 3.5V10L2 14V16L10 13.5V20L8.5 21V22L11.5 21L14.5 22V21L13 20V13.5L21 16Z"/>
-                            </svg>
                         </div>
                         <div class="monto">S/.700.30 de S/.900.00</div>
                     </div>
@@ -137,8 +129,13 @@
                     </div>
                 </li>
             </ul>
+
+
         </section>
     </div>
     </main>
+
+
+    
 </body>
 </html>
