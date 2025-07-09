@@ -2,96 +2,93 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luka | Ingreso</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/categoriastyle.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luka | Ingreso</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/categoriastyle.css">
+  <link rel="stylesheet" href="css/modal.css">
 </head>
 <body>
-
-
-    <div class="nav-bg">
-        <nav class="navegacion-principal">
-            <a href="miBalance.html"> <img src="img/Logo.png" id="Logo"> </a>
-            <a href="miBalance.html" class="opciones">Mi Balance</a>
-            <a href="categorias.html" class="opciones">Categorias</a>
-            <a href="resumenFinanciero.html" class="opciones">Resumen Financiero</a>
-            <a href="invitar_pareja.html" class="opciones">Invitar Pareja</a>
-            <a href="notificaciones.html"><img src="img/Notificacion.png" id="NotificacionesImg"></a>
-            <a href="cambioMoneda.html"><img src="img/Moneda.png" id="MonedaImg"></a>
-            <a href="login.html"><img src="img/salir.png" id="LogOutImg"></a>
-        </nav>
-    </div>
-    <h1>Categorias</h1>
+  <div class="nav-bg">
+    <nav class="navegacion-principal">
+      <a href="miBalance.html"> <img src="img/Logo.png" id="Logo"> </a>
+      <a href="miBalance.html" class="opciones">Mi Balance</a>
+      <a href="categorias.html" class="opciones">Categorias</a>
+      <a href="resumenFinanciero.html" class="opciones">Resumen Financiero</a>
+      <a href="invitar_pareja.html" class="opciones">Invitar Pareja</a>
+      <a href="notificaciones.html"><img src="img/Notificacion.png" id="NotificacionesImg"></a>
+      <a href="cambioMoneda.html"><img src="img/Moneda.png" id="MonedaImg"></a>
+      <a href="login.html"><img src="img/salir.png" id="LogOutImg"></a>
+    </nav>
+  </div>
+  <h1>Categorias</h1>
   <div class="caja-tot">
-  <div class="categorias">
+    <div class="categorias">      <a href="#" class="categoria abrir-modal" data-url="seleccionaCategoria.html?cate=Comida">
+        <div class="icono">
+          <img src="assets/comida.svg" alt="Comida" />
+        </div>
+        <div class="nombre">Comida</div>
+      </a>
+      <a href="#" class="categoria abrir-modal" data-url="seleccionaCategoria.html?cate=Transporte">
+        <div class="icono">
+          <img src="assets/transporte.svg" alt="Transporte" />
+        </div>
+        <div class="nombre">Transporte</div>
+      </a>
 
-    <a href="seleccionaCategoria.html?cate=Comida" class="categoria">
-      <div class="icono">
-        <img src="assets/comida.svg" alt="Comida" />
-      </div>
-      <div class="nombre">Comida</div>
-    </a>
+      <a href="#" class="categoria abrir-modal" data-url="seleccionaCategoria.html?cate=Servicios">
+        <div class="icono">
+          <img src="assets/servicios.svg" alt="Servicios" />
+        </div>
+        <div class="nombre">Servicios</div>
+      </a>
 
-    <a href="seleccionaCategoria.html?cate=Transporte" class="categoria">
-      <div class="icono">
-        <img src="assets/transporte.svg" alt="Transporte" />
-      </div>
-      <div class="nombre">Transporte</div>
-    </a>
+      <a href="#" class="categoria abrir-modal" data-url="seleccionaCategoria.html?cate=Renta">
+        <div class="icono">
+          <img src="assets/renta.svg" alt="Renta" />
+        </div>
+        <div class="nombre">Renta</div>
+      </a>
 
-    <a href="seleccionaCategoria.html?cate=Servicios" class="categoria">
-      <div class="icono">
-        <img src="assets/servicios.svg" alt="Servicios" />
-      </div>
-      <div class="nombre">Servicios</div>
-    </a>
+      <a href="#" class="categoria abrir-modal" data-url="seleccionaCategoria.html?cate=Entretenimiento">
+        <div class="icono">
+          <img src="assets/entretenimiento.svg" alt="Entretenimiento" />
+        </div>
+        <div class="nombre">Entretenimiento</div>
+      </a>
 
-    <a href="seleccionaCategoria.html?cate=Renta" class="categoria">
-      <div class="icono">
-        <img src="assets/renta.svg" alt="Renta" />
-      </div>
-      <div class="nombre">Renta</div>
-    </a>
+      <a href="#" class="categoria abrir-modal" data-url="seleccionaCategoria.html?cate=Educación">
+        <div class="icono">
+          <img src="assets/educación.svg" alt="Educación" />
+        </div>
+        <div class="nombre">Educación</div>
+      </a>
 
-    <a href="seleccionaCategoria.html?cate=Entretenimiento" class="categoria">
-      <div class="icono">
-        <img src="assets/entretenimiento.svg" alt="Entretenimiento" />
-      </div>
-      <div class="nombre">Entretenimiento</div>
-    </a>
+      <a href="#" class="categoria abrir-modal" data-url="seleccionaCategoria.html?cate=Compras">
+        <div class="icono">
+          <img src="assets/compras.svg" alt="Compras" />
+        </div>
+        <div class="nombre">Compras</div>
+      </a>
 
-    <a href="seleccionaCategoria.html?cate=Educación" class="categoria">
-      <div class="icono">
-        <img src="assets/educación.svg" alt="Educación" />
-      </div>
-      <div class="nombre">Educación</div>
-    </a>
-
-    <a href="seleccionaCategoria.html?cate=Compras" class="categoria">
-      <div class="icono">
-        <img src="assets/compras.svg" alt="Compras" />
-      </div>
-      <div class="nombre">Compras</div>
-    </a>
-
-    <a href="agregarCategoria.html" class="categoria">
-      <div class="icono">
-        <img src="assets/añadir.svg" alt="Añadir" />
-      </div>
-      <div class="nombre">Añadir</div>
-    </a>
-
-    <a href="agregarCategoria.html" class="categoria">
-      <div class="icono">
-        <img src="assets/añadir.svg" alt="Añadir" />
-      </div>
-      <div class="nombre">Añadir</div>
-    </a>
-  </div>
+      <a href="agregarCategoria.html" class="categoria">
+        <div class="icono">
+          <img src="assets/añadir.svg" alt="Añadir" />
+        </div>
+        <div class="nombre">Añadir</div>
+      </a>
+    </div>
   </div>
 
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <iframe id="modal-iframe" src="" frameborder="0"></iframe>
+    </div>
+  </div>
+
+  <script src="scripts/modal.js"></script>
 </body>
 </html>
